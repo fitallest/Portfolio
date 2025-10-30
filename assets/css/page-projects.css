@@ -1,0 +1,66 @@
+/*
+  CSS RIÊNG CHO TRANG PROJECTS (page-projects.css)
+  Đã tách từ thẻ <style> inline của projects.html gốc.
+*/
+
+/* BỎ: @import url('...') font Inter (Đã có trong HTML qua link Google Fonts) */
+
+body {
+    /* BỎ: font-family (Đã có trong HTML qua link Google Fonts) */
+    background-color: #f8fafc; /* Tailwind gray-50 */
+}
+ /* Style thêm cho card dự án */
+ .project-card {
+    /* Sử dụng Tailwind @apply nếu môi trường build hỗ trợ, nếu không thì viết CSS thuần */
+    /* @apply bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 ease-in-out hover:shadow-xl; */
+    background-color: white;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    overflow: hidden;
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* ease-in-out */
+    transition-duration: 300ms; /* duration-300 */
+}
+.project-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* hover:shadow-xl */
+}
+
+.project-card img {
+     /* @apply w-full h-48 object-cover group-hover:opacity-80 transition duration-300; */
+     width: 100%;
+     height: 12rem; /* h-48 */
+     object-fit: cover;
+     transition-property: opacity;
+     transition-duration: 300ms;
+ }
+ .project-card:hover img { /* group-hover:opacity-80 */
+    opacity: 0.8;
+ }
+
+ .project-card .content {
+     /* @apply p-6; */
+     padding: 1.5rem; /* p-6 */
+ }
+
+ .project-card .category {
+    /* @apply text-sm text-indigo-600 font-medium mb-1 block; */
+    font-size: 0.875rem; /* text-sm */
+    color: #4f46e5; /* text-indigo-600 */
+    font-weight: 500; /* font-medium */
+    margin-bottom: 0.25rem; /* mb-1 */
+    display: block;
+ }
+
+  .project-card h3 {
+     /* @apply text-xl font-bold text-gray-900 mb-2; */
+     font-size: 1.25rem; /* text-xl */
+     font-weight: 700; /* font-bold */
+     color: #111827; /* text-gray-900 */
+     margin-bottom: 0.5rem; /* mb-2 */
+ }
+
+ .project-card p {
+      /* @apply text-base text-gray-600; */
+      font-size: 1rem; /* text-base */
+      color: #4b5563; /* text-gray-600 */
+ }
