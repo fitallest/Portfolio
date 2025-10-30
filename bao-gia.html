@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Giá Thiết Kế Website - Nasani.vn</title>
+    <!-- Thêm Description -->
+    <meta name="description" content="Tính toán chi phí thiết kế website chuyên nghiệp theo gói, tùy chọn addon, hosting và tên miền. Yêu cầu báo giá nhanh chóng.">
+
+    <!-- Tailwind CSS (Giữ lại CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN (JS chung sẽ kích hoạt) -->
+    <script src="https://unpkg.com/lucide@latest"></script> 
+
+    <!-- BỎ Link Google Fonts (Đã có trong style.css) -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> -->
+    
+    <!-- THÊM Link CSS Chung -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Liên kết đến CSS riêng -->
+    <link rel="stylesheet" href="assets/css/page-baogia.css">
+</head>
+<body class="bg-gray-50"> <!-- THÊM class bg-gray-50 cho nhất quán -->
+
+    <!-- Header & Navbar (Menu đã được cập nhật link) -->
+    <header class="bg-white/90 sticky top-0 z-50 backdrop-blur-md border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600">
+                        Fi.tallest
+                    </a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Trang chủ</a>
+                    <a href="index.html#about" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Giới thiệu</a>
+                    <a href="index.html#services" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Dịch vụ</a>
+                    <a href="projects.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Dự án</a>
+                    <!-- SỬA LINK -->
+                    <a href="hosting.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Hosting</a>
+                    <!-- SỬA LINK -->
+                    <a href="domain.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Tên miền</a>
+                    <!-- Link Báo Giá (Active) -->
+                    <a href="bao-gia.html" class="text-indigo-600 font-semibold transition duration-150">Báo Giá</a> 
+                    <a href="index.html#contact" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Liên hệ ngay
+                    </a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                        <span class="sr-only">Mở menu</span>
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Trang chủ</a>
+                <a href="index.html#about" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Giới thiệu</a>
+                <a href="index.html#services" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Dịch vụ</a>
+                <a href="projects.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Dự án</a>
+                 <!-- SỬA LINK -->
+                <a href="hosting.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Hosting</a>
+                 <!-- SỬA LINK -->
+                <a href="domain.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Tên miền</a>
+                <!-- Link Báo Giá (Active) -->
+                <a href="bao-gia.html" class="text-indigo-600 bg-indigo-50 block px-3 py-2 rounded-md text-base font-medium">Báo Giá</a>
+                <a href="index.html#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Liên hệ ngay</a>
+            </div>
+        </div>
+    </header>
+    <!-- HẾT PHẦN HEADER -->
+
+    <!-- Toàn bộ nội dung <div class="max-w-7xl mx-auto ..."> ... </div> (GIỮ NGUYÊN) -->
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12 bg-white p-6 sm:p-10 rounded-xl shadow-lg">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-indigo-600 mb-2"> <!-- Đổi màu text-nasani-primary thành text-indigo-600 -->
+                BÁO GIÁ DỊCH VỤ THIẾT KẾ WEBSITE
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-700">Giải pháp chuyên nghiệp cho <span class="font-semibold text-cyan-600">Mọi Ngành Nghề</span></p> <!-- Đổi màu text-hospital-theme thành text-cyan-600 -->
+
+             <div class="mt-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                 <p class="font-bold text-gray-800 mb-2 uppercase text-base">CÔNG TY TNHH CÔNG NGHỆ PHẦN MỀM NASANI</p>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-left pt-2 border-t border-gray-200 space-y-3 md:space-y-0">
+                     <p class="flex items-start text-sm col-span-full md:col-span-1">
+                         <svg class="w-4 h-4 mr-2 mt-0.5 text-indigo-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                         <span class="text-gray-700">Lầu 1 Tòa nhà Saigon ICT, Lô 46 CVPM Quang Trung, P. Trung Mỹ Tây, TP. Hồ Chí Minh.</span>
+                     </p>
+                     <div class="flex flex-col space-y-1 text-sm md:col-span-1">
+                         <p class="flex items-center text-gray-700 font-medium">
+                             <svg class="w-4 h-4 mr-2 text-cyan-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.23 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3c0 .55-.45 1-1 1C10.74 21 3 13.26 3 4c0-.55.45-1 1-1h3c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.13.35.05.74-.23 1.02l-2.2 2.2z"/></svg>
+                             Tel: 028.37154879 | Fax: 028.37154878
+                         </p>
+                          <p class="flex items-center text-gray-700 font-medium">
+                             <svg class="w-4 h-4 mr-2 text-cyan-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                             Email: nasani@nasani.vn
+                         </p>
+                     </div>
+                     <div class="flex flex-col space-y-1 text-sm md:col-span-1">
+                         <p class="flex items-center text-gray-700 font-medium">
+                             <svg class="w-4 h-4 mr-2 text-cyan-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                             MST: 0319082906
+                         </p>
+                         <p class="flex items-center text-gray-700 font-medium">
+                             <svg class="w-4 h-4 mr-2 text-cyan-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zm-2-5H6v-2h12v2z"/></svg>
+                             TK: 1357668868 (Techcombank)
+                         </p>
+                     </div>
+                 </div>
+            </div>
+        </header>
+
+        <!-- II. CÁC GÓI THIẾT KẾ & TÍCH CHỌN -->
+        <section id="package-section" class="mb-12">
+             <!-- Đổi màu border-nasani-primary thành border-indigo-600 -->
+            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-600 pb-2 mb-8">II. Chọn Gói Thiết Kế (Không áp dụng VAT cho phần này)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Gói Cơ Bản -->
+                <label for="package_basic" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-4 border-gray-400 has-[:checked]:border-gray-700 has-[:checked]:ring-4 has-[:checked]:ring-gray-300 transition duration-300 hover:shadow-xl flex flex-col">
+                    <input type="radio" id="package_basic" name="package-option" value="7500000" class="hidden">
+                    <h3 class="text-2xl font-extrabold text-gray-700 mb-2">1. Gói Cơ Bản</h3>
+                    <p class="text-sm text-gray-500 mb-4">Dành cho website giới thiệu, thông tin tĩnh.</p>
+                    <div class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+                        7.500.000 <span class="text-lg font-normal">VNĐ</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-700 flex-grow">
+                        <li>Thiết kế theo yêu cầu (1 Layout)</li>
+                        <li>Tối ưu tốc độ tải trang cơ bản</li>
+                        <li>Module Tin Tức/Sự Kiện</li>
+                        <li>05 trang nội dung tĩnh (Giới thiệu, Liên hệ...)</li>
+                    </ul>
+                    <div class="mt-6 py-2 px-4 bg-gray-500 text-white font-bold rounded-lg text-center text-sm">CHỌN GÓI</div>
+                </label>
+                <!-- Gói Đa Giao Diện -->
+                 <!-- Đổi màu border-nasani-primary thành border-indigo-600, text-nasani-primary thành text-indigo-600, bg-nasani-primary thành bg-indigo-600 -->
+                <label for="package_multiple_interface" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-4 border-indigo-600 has-[:checked]:border-indigo-600 has-[:checked]:ring-4 has-[:checked]:ring-indigo-300 transition duration-300 hover:shadow-xl flex flex-col">
+                    <input type="radio" id="package_multiple_interface" name="package-option" value="10500000" class="hidden">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-2">2. Đa Giao Diện</h3>
+                    <p class="text-sm text-gray-500 mb-4">Website chuyên nghiệp, đa dạng module và thông tin.</p>
+                    <div class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-4">
+                        10.500.000 <span class="text-lg font-normal">VNĐ</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-700 flex-grow">
+                        <li>Bao gồm đầy đủ Gói Cơ Bản</li>
+                        <li>Đóng dấu logo thương hiệu</li>
+                        <li>Tối ưu SEO chuyên sâu & Bảo mật nâng cao</li>
+                        <li>Module Danh sách Dịch vụ/Chuyên khoa</li>
+                    </ul>
+                    <div class="mt-6 py-2 px-4 bg-indigo-600 text-white font-bold rounded-lg text-center text-sm">CHỌN GÓI (Phổ Biến)</div>
+                </label>
+                <!-- Gói Đầy Đủ -->
+                 <!-- Đổi màu border-hospital-theme thành border-cyan-600, text-hospital-theme thành text-cyan-600, bg-hospital-theme thành bg-cyan-600 -->
+                <label for="package_full" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-4 border-cyan-600 has-[:checked]:border-cyan-600 has-[:checked]:ring-4 has-[:checked]:ring-cyan-300 transition duration-300 hover:shadow-xl flex flex-col">
+                    <input type="radio" id="package_full" name="package-option" value="13500000" class="hidden">
+                    <h3 class="text-2xl font-extrabold text-cyan-600 mb-2">3. Gói Đầy Đủ</h3>
+                    <p class="text-sm text-gray-500 mb-4">Giải pháp toàn diện, tối ưu hóa tương tác.</p>
+                    <div class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+                        13.500.000 <span class="text-lg font-normal">VNĐ</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-700 flex-grow">
+                        <li>Bao gồm đầy đủ Gói Đa Giao Diện</li>
+                        <li>Bảo mật cơ bản (SSL, chống DDOS nhẹ)</li>
+                        <li>Tích hợp Live Chat AI/Tư vấn trực tuyến</li>
+                        <li>AI viết bài, thống kê từ khóa</li>
+                    </ul>
+                    <div class="mt-6 py-2 px-4 bg-cyan-600 text-white font-bold rounded-lg text-center text-sm">CHỌN GÓI (Đề Xuất)</div>
+                </label>
+            </div>
+        </section>
+
+        <!-- III. Dịch Vụ Nâng Cao & Chi Phí Đi Kèm (Add-on) -->
+         <!-- Đổi màu bg-nasani-light thành bg-indigo-50 -->
+        <section class="mb-12 bg-indigo-50 p-4 sm:p-6 rounded-xl shadow-md">
+
+            <!-- III.A. CHỌN LĨNH VỰC KINH DOANH -->
+             <!-- Đổi màu border-nasani-primary thành border-indigo-600 -->
+            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-600 pb-2 mb-6">III.A. Chọn Lĩnh Vực Của Bạn</h2>
+             <!-- Đổi màu border-nasani-primary thành border-indigo-600, bg-nasani-light thành bg-indigo-50 khi checked -->
+            <div class="relative grid grid-cols-2 md:grid-cols-4 gap-4">
+                <input type="radio" id="industry-yte" name="industry-option" value="yte" checked>
+                <label for="industry-yte" class="industry-label p-4 rounded-lg text-center block bg-white shadow-sm hover:shadow-md">
+                    <span class="text-3xl">🩺</span>
+                    <span class="font-semibold text-gray-800 block mt-2 text-sm sm:text-base">Y Tế</span>
+                </label>
+                <input type="radio" id="industry-xaydung" name="industry-option" value="xaydung">
+                <label for="industry-xaydung" class="industry-label p-4 rounded-lg text-center block bg-white shadow-sm hover:shadow-md">
+                    <span class="text-3xl">🏗️</span>
+                    <span class="font-semibold text-gray-800 block mt-2 text-sm sm:text-base">Xây Dựng</span>
+                </label>
+                <input type="radio" id="industry-lamdep" name="industry-option" value="lamdep">
+                <label for="industry-lamdep" class="industry-label p-4 rounded-lg text-center block bg-white shadow-sm hover:shadow-md">
+                    <span class="text-3xl">💅</span>
+                    <span class="font-semibold text-gray-800 block mt-2 text-sm sm:text-base">Làm Đẹp</span>
+                </label>
+                <input type="radio" id="industry-thuongmai" name="industry-option" value="thuongmai">
+                <label for="industry-thuongmai" class="industry-label p-4 rounded-lg text-center block bg-white shadow-sm hover:shadow-md">
+                    <span class="text-3xl">🛒</span>
+                    <span class="font-semibold text-gray-800 block mt-2 text-sm sm:text-base">Thương Mại</span>
+                </label>
+            </div>
+
+            <!-- Container chứa các gói Add-on -->
+            <div id="addon-container" class="col-span-full mt-6">
+                 <!-- Đổi màu border-nasani-primary thành border-indigo-600 -->
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 border-b-2 border-indigo-600 pb-2 mb-6">III.B. Tùy Chọn Tính Năng Nâng Cao (Add-on) <span class="text-sm text-gray-500">(Không áp dụng VAT)</span></h3>
+                 <!-- Đổi màu border-hospital-theme thành border-cyan-600 -->
+                 <!-- Đổi màu text-nasani-primary thành text-indigo-600, focus:ring-nasani-primary thành focus:ring-indigo-500 -->
+                <div class="p-4 sm:p-5 bg-white rounded-lg shadow-inner border-l-4 border-cyan-600">
+                    <p class="text-sm text-gray-700 italic mb-4">Tích chọn các tính năng dưới đây để cộng thêm vào tổng chi phí thiết kế:</p>
+
+                    <!-- Gói Add-on cho Y TẾ -->
+                    <div id="addons-yte" class="addon-group grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        <label for="addon_doctor_lookup" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_doctor_lookup" name="addon-feature" value="2000000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Module Tra cứu Bác sĩ
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">2.000.000 VNĐ</span>
+                        </label>
+                        <label for="addon_rating_system" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_rating_system" name="addon-feature" value="3500000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Hệ thống Đánh giá Dịch vụ
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">3.500.000 VNĐ</span>
+                        </label>
+                        <label for="addon_bmi_calculator" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_bmi_calculator" name="addon-feature" value="2500000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Công cụ Tính BMI/Dinh dưỡng
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">2.500.000 VNĐ</span>
+                        </label>
+                        <label for="addon_advanced_api" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_advanced_api" name="addon-feature" value="5000000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Tích hợp API Đặt lịch (CRM/HIS)
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">5.000.000 VNĐ</span>
+                        </label>
+                    </div>
+
+                    <!-- Gói Add-on cho XÂY DỰNG -->
+                    <div id="addons-xaydung" class="addon-group grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                         <label for="addon_project_portfolio" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_project_portfolio" name="addon-feature" value="4000000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Module Portfolio Dự án
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">4.000.000 VNĐ</span>
+                        </label>
+                         <label for="addon_estimation_tool" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_estimation_tool" name="addon-feature" value="6000000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Công cụ Ước tính Chi phí
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">6.000.000 VNĐ</span>
+                        </label>
+                    </div>
+
+                    <!-- Gói Add-on cho LÀM ĐẸP -->
+                    <div id="addons-lamdep" class="addon-group grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                         <label for="addon_booking_spa" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_booking_spa" name="addon-feature" value="4500000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Hệ thống Đặt lịch Spa
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">4.500.000 VNĐ</span>
+                        </label>
+                         <label for="addon_gallery_before_after" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_gallery_before_after" name="addon-feature" value="3000000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Thư viện ảnh Trước & Sau
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">3.000.000 VNĐ</span>
+                        </label>
+                    </div>
+
+                    <!-- Gói Add-on cho THƯƠNG MẠI -->
+                    <div id="addons-thuongmai" class="addon-group grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                         <label for="addon_ecommerce" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_ecommerce" name="addon-feature" value="8000000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Giỏ hàng & Thanh toán
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">8.000.000 VNĐ</span>
+                        </label>
+                         <label for="addon_inventory_management" class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded transition">
+                            <span class="flex items-center mb-1 sm:mb-0">
+                                <input type="checkbox" id="addon_inventory_management" name="addon-feature" value="5000000" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mr-3">
+                                Quản lý Tồn kho cơ bản
+                            </span>
+                            <span class="font-bold text-red-600 text-sm sm:text-base ml-7 sm:ml-0">5.000.000 VNĐ</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- III.C. Chi Phí Tên miền & Hosting -->
+             <!-- Đổi màu border-nasani-primary thành border-indigo-600 -->
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-800 border-b-2 border-indigo-600 pb-2 mb-6 mt-10">III.C. Chọn Gói Hosting & Tên miền (Tính theo năm)</h3>
+            <div class="p-4 sm:p-5 bg-white rounded-lg shadow-inner">
+                <p class="text-base sm:text-lg font-semibold text-gray-800 mb-4">1. Chọn Gói Hosting (Giá Đã VAT - Click lần 2 để bỏ chọn)</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-4">
+                    <label for="hosting_5gb" class="cursor-pointer border-2 border-indigo-500 has-[:checked]:bg-indigo-50 has-[:checked]:ring-4 has-[:checked]:ring-indigo-200 rounded-lg p-3 transition duration-150">
+                        <input type="radio" id="hosting_5gb" name="hosting-option" value="5261760" class="hidden">
+                        <p class="text-lg sm:text-xl font-bold text-indigo-700">5GB</p>
+                        <p class="text-xs sm:text-sm text-gray-500">4.872.000 <span class="font-bold">VNĐ</span></p>
+                        <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                        <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 5.261.760 VNĐ</p>
+                    </label>
+                    <label for="hosting_7gb" class="cursor-pointer border-2 border-purple-500 has-[:checked]:bg-purple-50 has-[:checked]:ring-4 has-[:checked]:ring-purple-200 rounded-lg p-3 transition duration-150">
+                        <input type="radio" id="hosting_7gb" name="hosting-option" value="6480000" class="hidden">
+                        <p class="text-lg sm:text-xl font-bold text-purple-700">7GB</p>
+                        <p class="text-xs sm:text-sm text-gray-500">6.000.000 <span class="font-bold">VNĐ</span></p>
+                         <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                         <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 6.480.000 VNĐ</p>
+                    </label>
+                    <label for="hosting_10gb" class="cursor-pointer border-2 border-red-500 has-[:checked]:bg-red-50 has-[:checked]:ring-4 has-[:checked]:ring-red-200 rounded-lg p-3 transition duration-150">
+                        <input type="radio" id="hosting_10gb" name="hosting-option" value="7776000" class="hidden">
+                        <p class="text-lg sm:text-xl font-bold text-red-700">10GB</p>
+                        <p class="text-xs sm:text-sm text-gray-500">7.200.000 <span class="font-bold">VNĐ</span></p>
+                        <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                        <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 7.776.000 VNĐ</p>
+                    </label>
+                    <label for="hosting_20gb_ca_nhan" class="cursor-pointer border-2 border-green-500 has-[:checked]:bg-green-50 has-[:checked]:ring-4 has-[:checked]:ring-green-200 rounded-lg p-3 transition duration-150">
+                        <input type="radio" id="hosting_20gb_ca_nhan" name="hosting-option" value="12960000" class="hidden">
+                        <p class="text-lg sm:text-xl font-bold text-green-700">20GB</p>
+                        <p class="text-xs sm:text-sm text-gray-500">12.000.000 <span class="font-bold">VNĐ</span></p>
+                        <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                        <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 12.960.000 VNĐ</p>
+                    </label>
+                </div>
+
+                <div id="extra-hosting-packages" class="hidden-hosting-packages">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-4 border-t pt-4 border-gray-200">
+                        <label for="hosting_16gb" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                            <input type="radio" id="hosting_16gb" name="hosting-option" value="11404800" class="hidden">
+                            <p class="text-lg sm:text-xl font-bold text-gray-700">16GB</p>
+                            <p class="text-xs sm:text-sm text-gray-500">10.080.000 <span class="font-bold">VNĐ</span></p>
+                            <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                            <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 11.404.800 VNĐ</p>
+                        </label>
+                        <label for="hosting_25gb" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                            <input type="radio" id="hosting_25gb" name="hosting-option" value="15552000" class="hidden">
+                            <p class="text-lg sm:text-xl font-bold text-gray-700">25GB</p>
+                            <p class="text-xs sm:text-sm text-gray-500">14.400.000 <span class="font-bold">VNĐ</span></p>
+                            <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                            <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 15.552.000 VNĐ</p>
+                        </label>
+                        <label for="hosting_30gb" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                            <input type="radio" id="hosting_30gb" name="hosting-option" value="17366400" class="hidden">
+                            <p class="text-lg sm:text-xl font-bold text-gray-700">30GB</p>
+                            <p class="text-xs sm:text-sm text-gray-500">16.080.000 <span class="font-bold">VNĐ</span></p>
+                            <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                            <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 17.366.400 VNĐ</p>
+                        </label>
+                        <label for="hosting_40gb_dn" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                            <input type="radio" id="hosting_40gb_dn" name="hosting-option" value="21686400" class="hidden">
+                            <p class="text-lg sm:text-xl font-bold text-gray-700">40GB (DN)</p>
+                            <p class="text-xs sm:text-sm text-gray-500">20.080.000 <span class="font-bold">VNĐ</span></p>
+                            <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                            <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 21.686.400 VNĐ</p>
+                        </label>
+                        <label for="hosting_50gb_dn" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                            <input type="radio" id="hosting_50gb_dn" name="hosting-option" value="25920000" class="hidden">
+                            <p class="text-lg sm:text-xl font-bold text-gray-700">50GB (DN)</p>
+                            <p class="text-xs sm:text-sm text-gray-500">24.000.000 <span class="font-bold">VNĐ</span></p>
+                            <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                            <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 25.920.000 VNĐ</p>
+                        </label>
+						 <label for="hosting_70gb_dn" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                            <input type="radio" id="hosting_70gb_dn" name="hosting-option" value="34603200" class="hidden">
+                            <p class="text-lg sm:text-xl font-bold text-gray-700">70GB (DN)</p>
+                            <p class="text-xs sm:text-sm text-gray-500">32.040.000 <span class="font-bold">VNĐ</span></p>
+                            <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                            <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 34.603.200 VNĐ</p>
+                        </label>
+                        <label for="hosting_100gb_sieu_dn" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                            <input type="radio" id="hosting_100gb_sieu_dn" name="hosting-option" value="46656000" class="hidden">
+                            <p class="text-lg sm:text-xl font-bold text-gray-700">100GB (Siêu DN)</p>
+                            <p class="text-xs sm:text-sm text-gray-500">43.200.000 <span class="font-bold">VNĐ</span></p>
+                            <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                            <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 46.656.000 VNĐ</p>
+                        </label>
+                        <label for="hosting_200gb_sieu_dn" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                            <input type="radio" id="hosting_200gb_sieu_dn" name="hosting-option" value="77760000" class="hidden">
+                            <p class="text-lg sm:text-xl font-bold text-gray-700">200GB (Siêu DN)</p>
+                            <p class="text-xs sm:text-sm text-gray-500">72.000.000 <span class="font-bold">VNĐ</span></p>
+                            <p class="text-xs text-green-500 font-semibold">Giá CHƯA VAT</p>
+                            <p class="text-xs text-red-500 font-semibold">ĐÃ VAT: 77.760.000 VNĐ</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4 border-t border-gray-200 mt-4">
+                    <button id="toggle-extra-packages-btn" class="py-2 px-6 bg-gray-500 text-white font-semibold rounded-full hover:bg-gray-600 transition duration-300">
+                        Xem thêm các gói Hosting khác
+                    </button>
+                </div>
+
+                <p class="text-base sm:text-lg font-semibold text-gray-800 mb-4 border-t pt-4 mt-8">2. Chọn Tên miền (Giá Đã VAT - Click lần 2 để bỏ chọn)</p>
+                   <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                    <label for="domain_com" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                        <input type="radio" id="domain_com" name="domain-option" value="366120" class="hidden">
+                        <p class="text-lg sm:text-xl font-bold text-gray-700">.COM</p>
+                        <p class="text-xs sm:text-sm text-gray-500">339.000 <span class="font-bold">VNĐ</span></p>
+                         <p class="text-xs text-red-500 font-semibold">Giá ĐÃ VAT: 366.120 VNĐ</p>
+                    </label>
+                    <label for="domain_vn" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                        <input type="radio" id="domain_vn" name="domain-option" value="820000" class="hidden">
+                        <p class="text-lg sm:text-xl font-bold text-gray-700">.VN</p>
+                        <p class="text-xs sm:text-sm text-gray-500">759.259 <span class="font-bold">VNĐ</span></p>
+                         <p class="text-xs text-red-500 font-semibold">Giá ĐÃ VAT: 820.000 VNĐ</p>
+                    </label>
+                    <label for="domain_com_vn" class="cursor-pointer border-2 border-gray-300 has-[:checked]:bg-gray-100 has-[:checked]:ring-2 has-[:checked]:ring-gray-400 rounded-lg p-3 transition duration-150">
+                        <input type="radio" id="domain_com_vn" name="domain-option" value="691000" class="hidden">
+                        <p class="text-lg sm:text-xl font-bold text-gray-700">.COM.VN</p>
+                        <p class="text-xs sm:text-sm text-gray-500">639.815 <span class="font-bold">VNĐ</span></p>
+                        <p class="text-xs text-red-500 font-semibold">Giá ĐÃ VAT: 691.000 VNĐ</p>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- IV. Quy Trình Triển Khai & Thanh Toán -->
+        <section class="mb-12">
+             <!-- Đổi màu border-nasani-primary thành border-indigo-600 -->
+            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-600 pb-2 mb-6">IV. Quy Trình Triển Khai & Thanh Toán</h2>
+            <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg mb-8">
+                 <!-- Đổi màu text-nasani-primary thành text-indigo-600, bg-nasani-light thành bg-indigo-50, bg-nasani-primary thành bg-indigo-600 -->
+                <h3 class="text-lg sm:text-xl font-semibold text-indigo-600 mb-4">1. Quy trình Triển khai (4 - 6 tuần)</h3>
+                <ol class="relative border-l border-gray-200 ml-3">
+                    <li class="mb-4 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-indigo-50 rounded-full -left-3 ring-8 ring-white text-xs font-bold">1</span>
+                        <h4 class="flex items-center mb-1 text-base sm:text-lg font-semibold text-gray-900">Thu thập Yêu cầu & Ký HĐ <span class="bg-indigo-600 text-white text-xs font-medium px-2 py-0.5 rounded ml-2">1-2 Ngày</span></h4>
+                        <p class="text-sm sm:text-base font-normal text-gray-600">Thống nhất module, ký hợp đồng.</p>
+                    </li>
+                    <li class="mb-4 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-indigo-50 rounded-full -left-3 ring-8 ring-white text-xs font-bold">2</span>
+                        <h4 class="mb-1 text-base sm:text-lg font-semibold text-gray-900">Thiết kế Giao diện <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-0.5 rounded ml-2">2-5 Ngày</span></h4>
+                        <p class="text-sm sm:text-base font-normal text-gray-600">Thiết kế UI/UX, gửi demo.</p>
+                    </li>
+                    <li class="mb-4 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-indigo-50 rounded-full -left-3 ring-8 ring-white text-xs font-bold">3</span>
+                        <h4 class="mb-1 text-base sm:text-lg font-semibold text-gray-900">Lập trình & Tích hợp <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-0.5 rounded ml-2">2-4 Tuần</span></h4>
+                        <p class="text-sm sm:text-base font-normal text-gray-600">Lập trình Back-end, nhập liệu.</p>
+                    </li>
+                    <li class="mb-4 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-indigo-50 rounded-full -left-3 ring-8 ring-white text-xs font-bold">4</span>
+                        <h4 class="mb-1 text-base sm:text-lg font-semibold text-gray-900">Kiểm thử & Đào tạo <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-0.5 rounded ml-2">2-3 Ngày</span></h4>
+                        <p class="text-sm sm:text-base font-normal text-gray-600">Kiểm tra, đào tạo quản trị.</p>
+                    </li>
+                    <li class="ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-indigo-600 text-white rounded-full -left-3 ring-8 ring-white text-xs font-bold">5</span>
+                        <h4 class="mb-1 text-base sm:text-lg font-semibold text-gray-900">Bàn giao Chính thức</h4>
+                        <p class="text-sm sm:text-base font-normal text-gray-600">Hoàn tất thanh toán, bàn giao.</p>
+                    </li>
+                </ol>
+            </div>
+
+             <!-- Đổi màu border-hospital-theme thành border-cyan-600, text-hospital-theme thành text-cyan-600 -->
+             <!-- Đổi màu bg-nasani-light thành bg-indigo-50, border-nasani-primary thành border-indigo-600, text-nasani-primary thành text-indigo-600 -->
+            <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg border-l-4 border-cyan-600">
+                <h3 class="text-lg sm:text-xl font-semibold text-cyan-600 mb-4">2. Quy trình Thanh toán</h3>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 text-center">
+                    <div class="flex-1 p-3 sm:p-4 border rounded-lg bg-indigo-50 border-indigo-600">
+                        <p class="text-base sm:text-lg font-bold text-indigo-600">Đợt 1 (Ký HĐ)</p>
+                        <p class="text-xl sm:text-2xl font-extrabold text-red-600 mt-1">50%</p>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Chi phí Thiết kế</p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 transform rotate-90 sm:rotate-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L15.17 11H4v2h11.17l-4.58 4.59L12 20l8-8z"/></svg>
+                    </div>
+                    <div class="flex-1 p-3 sm:p-4 border rounded-lg bg-indigo-50 border-cyan-600">
+                        <p class="text-base sm:text-lg font-bold text-cyan-600">Đợt 2 (Hạ tầng)</p>
+                        <p class="text-xl sm:text-2xl font-extrabold text-red-600 mt-1">100%</p>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Hosting & Domain</p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 transform rotate-90 sm:rotate-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L15.17 11H4v2h11.17l-4.58 4.59L12 20l8-8z"/></svg>
+                    </div>
+                    <div class="flex-1 p-3 sm:p-4 border rounded-lg bg-indigo-50 border-indigo-600">
+                        <p class="text-base sm:text-lg font-bold text-indigo-600">Đợt 3 (Bàn giao)</p>
+                        <p class="text-xl sm:text-2xl font-extrabold text-red-600 mt-1">50%</p>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Thiết kế còn lại</p>
+                    </div>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 italic mt-4 text-center">Lưu ý: Chi phí thiết kế (đã giảm giá) chia 2 đợt. Hạ tầng thanh toán 100% ở Đợt 2.</p>
+            </div>
+        </section>
+
+        <!-- V. Dịch Vụ Chăm Sóc & Bảo Trì Hậu Mãi -->
+        <section class="mb-12">
+             <!-- Đổi màu border-nasani-primary thành border-indigo-600 -->
+            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-600 pb-2 mb-6">V. Dịch Vụ Chăm Sóc & Bảo Trì Hậu Mãi</h2>
+             <!-- Đổi màu text-nasani-primary thành text-indigo-600, text-hospital-theme thành text-cyan-600 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-lg">
+                    <svg class="w-10 h-10 mx-auto mb-3 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Bảo Hành Trọn Đời</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Bảo hành vĩnh viễn lỗi kỹ thuật từ Nasani.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-lg">
+                    <svg class="w-10 h-10 mx-auto mb-3 text-cyan-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Hỗ Trợ Nhanh Chóng 24/7</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Đảm bảo hoạt động ổn định, xử lý sự cố trong 24h.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-lg">
+                    <svg class="w-10 h-10 mx-auto mb-3 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" />
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Đào Tạo Quản Trị Hệ Thống</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Đào tạo trực tiếp/trực tuyến quản lý nội dung.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (GIỮ NGUYÊN) -->
+        <footer class="text-center p-4 text-gray-500 text-sm">
+            &copy; 2025 Báo giá được thiết kế và cung cấp bởi Nasani.vn - Developed by Cao Nhất Phi.
+        </footer>
+    </div>
+
+    <!-- THANH TRƯỢT BÁO GIÁ (Đã đổi màu border-nasani-primary thành border-indigo-600) -->
+    <div id="quote-summary-footer" class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-4 border-indigo-600 shadow-[0_-8px_20px_rgba(0,0,0,0.1)] transition-all duration-500 ease-in-out">
+        <!-- Trigger -->
+        <div id="quote-summary-trigger" onclick="toggleQuotePanel()" class="max-w-7xl mx-auto pt-3 pb-4 px-4 cursor-pointer group transition-colors hover:bg-gray-50">
+            <div class="w-10 h-1.5 bg-gray-300 rounded-full mx-auto mb-2 transition-colors group-hover:bg-gray-400"></div>
+            <div class="flex justify-between items-center">
+                <div class="text-left">
+                    <p class="text-base sm:text-lg font-bold text-gray-800">TỔNG CỘNG (đã bao gồm VAT):</p>
+                </div>
+                <div class="flex items-center">
+                    <p class="text-xl sm:text-2xl font-extrabold text-red-700 mr-4" id="total-cost-display-minimal">0 đ</p>
+                    <div id="quote-toggle-icon" class="transition-transform duration-300">
+                         <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Panel chi tiết (Đã đổi màu text-nasani-primary thành text-indigo-600, text-hospital-theme thành text-cyan-600, focus:ring-nasani-primary thành focus:ring-indigo-500, bg-nasani-primary thành bg-indigo-600) -->
+        <div id="quote-details-panel" class="max-w-7xl mx-auto">
+             <div class="px-4 pb-4">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                    <div class="w-full lg:w-3/5">
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-3 gap-y-2 w-full text-center sm:text-left">
+                            <div class="border-b lg:border-b-0 lg:border-r pb-1 lg:pb-0 lg:pr-2">
+                                <p class="text-xs sm:text-sm text-gray-600">Gói TK:</p>
+                                <p class="font-bold text-indigo-600 text-sm sm:text-base" id="package-price-display">0 đ</p>
+                            </div>
+                            <div class="border-b lg:border-b-0 lg:border-r pb-1 lg:pb-0 lg:pr-2">
+                                <p class="text-xs sm:text-sm text-gray-600">Add-on:</p>
+                                <p class="font-bold text-red-600 text-sm sm:text-base" id="addon-price-display">0 đ</p>
+                            </div>
+                            <div class="border-b lg:border-b-0 lg:border-r pb-1 lg:pb-0 lg:pr-2">
+                                <p class="text-xs sm:text-sm text-gray-600">Ưu đãi:</p>
+                                <p class="font-bold text-green-600 text-sm sm:text-base" id="discount-price-display">0 đ</p>
+                            </div>
+                            <div class="border-b lg:border-b-0 lg:border-r pb-1 lg:pb-0 lg:pr-2">
+                                <p class="text-xs sm:text-sm text-gray-600">Hosting:</p>
+                                <p class="font-bold text-cyan-600 text-sm sm:text-base" id="hosting-price-display">0 đ</p>
+                            </div>
+                            <div>
+                                <p class="text-xs sm:text-sm text-gray-600">Tên miền:</p>
+                                <p class="font-bold text-cyan-600 text-sm sm:text-base" id="domain-price-display">0 đ</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end w-full border-t pt-2 mt-2">
+                            <div class="text-left">
+                                <p class="text-xs sm:text-sm font-bold text-gray-500">VAT Hạ tầng:</p>
+                                <p class="font-bold text-gray-700 text-sm sm:text-base" id="vat-display">0 đ</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-base sm:text-lg font-bold text-gray-800">TỔNG CỘNG:</p>
+                                <p class="text-xl sm:text-2xl font-extrabold text-red-700" id="total-cost-display">0 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 w-full lg:w-2/5 mt-4 lg:mt-0 lg:pl-6">
+                        <div class="flex gap-2">
+                            <input type="text" id="discount-code-input" placeholder="Nhập mã giảm giá..." class="flex-grow p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <button id="apply-discount-btn" class="py-2 px-4 bg-gray-600 text-white font-bold rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm">
+                                Áp dụng
+                            </button>
+                        </div>
+                        <p id="discount-status" class="text-xs text-green-600 font-semibold h-4 -mt-2 mb-1"></p>
+
+                        <div class="flex flex-col sm:flex-row gap-3 w-full">
+                            <a href="tel:0909876817" class="flex-1 inline-flex items-center justify-center py-2 sm:py-3 px-4 bg-red-500 text-white font-bold rounded-full text-sm sm:text-base shadow-xl hover:bg-red-600 transition duration-300">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.23 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3c0 .55-.45 1-1 1C10.74 21 3 13.26 3 4c0-.55.45-1 1-1h3c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.13.35.05.74-.23 1.02l-2.2 2.2z"/></svg>
+                                GỌI TƯ VẤN
+                            </a>
+                            <button onclick="finalizeQuote()" class="flex-1 py-2 sm:py-3 px-4 bg-indigo-600 text-white font-bold rounded-full text-sm sm:text-base shadow-xl hover:bg-indigo-700 transition duration-300"> <!-- Sửa hover:bg-indigo-600 thành hover:bg-indigo-700 -->
+                                YÊU CẦU BÁO GIÁ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ALERT (Đã đổi màu bg-nasani-primary thành bg-indigo-600, hover:bg-indigo-600 thành hover:bg-indigo-700 khi success) -->
+    <div id="alert-modal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4" onclick="hideAlert()">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-2xl max-w-lg w-full border border-gray-700" onclick="event.stopPropagation()">
+            <h2 id="alert-title" class="text-xl sm:text-2xl font-bold text-emerald-400 mb-4">Thông báo</h2>
+            <div id="alert-message" class="text-sm text-gray-300 bg-gray-900/50 border border-gray-700 p-4 rounded-lg max-h-96 overflow-y-auto mb-6"></div>
+            <button id="alert-close-btn" class="w-full text-white font-bold py-3 px-4 rounded-full transition duration-300">Đã hiểu</button>
+        </div>
+    </div>
+
+    <!-- THÊM Link JS Chung -->
+    <script src="assets/js/main.js"></script>
+    <!-- Liên kết đến JS riêng -->
+    <script src="assets/js/page-baogia.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tên Miền Giá Rẻ & Gợi Ý Tên Miền - Fi.tallest</title>
+    
+    <!-- Tailwind CSS (Giữ lại CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Giữ lại link gốc) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Liên kết đến CSS riêng (Sẽ tạo file này sau) -->
+    <link rel="stylesheet" href="assets/css/page-domain.css"> 
+</head>
+<body class="bg-gray-50">
+    <!-- Bỏ Header/Footer/Nút liên hệ theo yêu cầu giữ nguyên -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="max-w-7xl mx-auto relative z-1">
+                <h1>Đăng Ký Tên Miền Giá Rẻ & Gợi Ý Tên Miền</h1>
+                <p>Tìm kiếm tên miền hoàn hảo cho doanh nghiệp hoặc dự án cá nhân của bạn. Nhập từ khóa và ngành nghề để nhận gợi ý độc đáo!</p>
+            </div>
+        </section>
+
+        <!-- Domain Search & Suggestion Section -->
+        <section class="domain-search-container">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Tìm kiếm & Gợi ý tên miền</h2>
+            <div class="search-input-group">
+                 <div>
+                    <label for="domainInput" class="block text-sm font-medium text-gray-700 mb-1">Tên miền mong muốn</label>
+                    <input type="text" id="domainInput" class="search-input" placeholder="Nhập tên miền hoặc từ khóa (ví dụ: công ty abc)" />
+                 </div>
+                 <div>
+                    <label for="industryInput" class="block text-sm font-medium text-gray-700 mb-1">Ngành nghề (Tùy chọn)</label>
+                    <input type="text" id="industryInput" class="search-input" placeholder="Ví dụ: nhựa, thời trang, du lịch..." />
+                 </div>
+                <button id="searchDomainButton" class="domain-search-button">
+                    Tìm kiếm & Gợi ý
+                </button>
+            </div>
+            <div id="suggestionResultsArea" class="suggestion-results-area hidden"> 
+                <div class="suggestion-columns">
+                    <!-- Column 1: Direct Results -->
+                    <div id="column1Results">
+                        <h3>Kết quả trực tiếp</h3>
+                        <div class="suggestion-list">
+                            <p class="text-center text-gray-500 p-4">Nhập tên miền và nhấn nút để xem kết quả.</p>
+                        </div>
+                    </div>
+                    <!-- Column 2: Smart Suggestions -->
+                    <div id="column2Results">
+                        <h3>Gợi ý khác</h3>
+                        <div class="tabs-container" id="suggestionTabs">
+                            <!-- Tab buttons will be added by JS -->
+                        </div>
+                        <div class="tab-content-container suggestion-list" id="suggestionTabContent">
+                             <!-- Tab content will be added by JS -->
+                             <p class="text-center text-gray-500 p-4">Nhập thêm ngành nghề để có gợi ý tốt hơn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">NHỮNG LỢI ÍCH KHI ĐĂNG KÝ TÊN MIỀN TẠI Nasani</h2>
+                <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">
+                    Chúng tôi chuẩn hóa toàn bộ quy trình quản lý tên miền bằng công nghệ để mang đến sự thuận tiện và trải nghiệm tối đa cho khách hàng.
+                </p>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="icon-wrapper"><i data-lucide="settings" class="w-8 h-8"></i></div>
+                        <h3>Quản Lý Tên Miền</h3>
+                        <p>Bạn hoàn toàn chủ động trong việc quản lý và gia hạn dịch vụ tên miền...</p> <!-- Rút gọn nội dung -->
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-wrapper"><i data-lucide="globe" class="w-8 h-8"></i></div>
+                        <h3>Quản Lý DNS</h3>
+                        <p>Tính năng DNS trung gian được tích hợp sẵn...</p> <!-- Rút gọn nội dung -->
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-wrapper"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                        <h3>An Toàn Pháp Lý</h3>
+                        <p>Đăng ký tên miền tại nhà đăng ký Việt Nam giúp hạn chế...</p> <!-- Rút gọn nội dung -->
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-wrapper"><i data-lucide="line-chart" class="w-8 h-8"></i></div>
+                        <h3>Tốt Cho SEO</h3>
+                        <p>Theo Google chia sẻ, các doanh nghiệp nên đăng ký tên miền .VN...</p> <!-- Rút gọn nội dung -->
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-wrapper"><i data-lucide="award" class="w-8 h-8"></i></div>
+                        <h3>Uy Tín Thương Hiệu</h3>
+                        <p>Việc sở hữu tên miền .VN giúp tăng tính nhận diện thương hiệu...</p> <!-- Rút gọn nội dung -->
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-wrapper"><i data-lucide="lock" class="w-8 h-8"></i></div>
+                        <h3>Ẩn Thông Tin Tên Miền</h3>
+                        <p>Với dịch vụ ID Protection này giúp bạn ẩn các thông tin tên miền...</p> <!-- Rút gọn nội dung -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vietnam Domain Price Section -->
+        <section class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">BẢNG GIÁ TÊN MIỀN VIỆT NAM (.VN)</h2>
+                <div class="price-table-container">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Tên miền</th>
+                                <th>ĐĂNG KÝ MỚI<br><small>(đã bao gồm VAT)</small></th>
+                                <th>GIA HẠN<br><small>(đã bao gồm VAT)</small></th>
+                                <th>CHUYỂN VỀ NASANI<br><small>(đã bao gồm VAT)</small></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>.VN</td><td class="price-value">820.000đ</td><td class="price-value">479.000đ</td><td rowspan="6" class="free-text">Miễn phí</td></tr>
+                            <tr><td>.COM.VN</td><td class="price-value">691.000đ</td><td class="price-value">349.000đ</td></tr>
+                            <tr><td>.EDU.VN</td><td class="price-value">397.000đ</td><td class="price-value">199.000đ</td></tr>
+                            <tr><td>.GOV.VN</td><td class="price-value">397.000đ</td><td class="price-value">199.000đ</td></tr>
+                            <tr><td>.NET.VN</td><td class="price-value">691.000đ</td><td class="price-value">349.000đ</td></tr>
+                            <tr><td>.INFO.VN</td><td class="price-value">397.000đ</td><td class="price-value">199.000đ</td></tr>
+                            <tr><td colspan="4"><button class="register-button open-register-modal">ĐĂNG KÝ</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="note">Giá trên đã bao gồm VAT 8%.</p>
+            </div>
+        </section>
+
+        <!-- International Domain Price Section -->
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">BẢNG GIÁ TÊN MIỀN QUỐC TẾ</h2>
+                <div class="price-table-container">
+                    <table class="price-table">
+                         <thead>
+                            <tr>
+                                <th>Tên miền</th>
+                                <th>ĐĂNG KÝ MỚI<br><small>(đã bao gồm VAT)</small></th>
+                                <th>GIA HẠN<br><small>(đã bao gồm VAT)</small></th>
+                                <th>CHUYỂN VỀ NASANI<br><small>(đã bao gồm VAT)</small></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>.COM</td><td class="price-value">366.120đ</td><td class="price-value">366.120đ</td><td class="price-value">366.120đ</td></tr>
+                            <tr><td>.NET</td><td class="price-value">415.800đ</td><td class="price-value">415.800đ</td><td class="price-value">415.800đ</td></tr>
+                            <tr><td>.INFO</td><td class="price-value">680.400đ</td><td class="price-value">680.400đ</td><td class="price-value">680.400đ</td></tr>
+                            <tr><td>.ORG</td><td class="price-value">405.000đ</td><td class="price-value">405.000đ</td><td class="price-value">405.000đ</td></tr>
+                            <tr><td>.BIZ</td><td class="price-value">583.200đ</td><td class="price-value">583.200đ</td><td class="price-value">583.200đ</td></tr>
+                            <tr><td>.ME</td><td class="price-value">691.200đ</td><td class="price-value">691.200đ</td><td class="price-value">691.200đ</td></tr>
+                            <tr><td colspan="4"><button class="register-button open-register-modal">ĐĂNG KÝ</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="note">Giá trên đã bao gồm VAT 8%.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Đăng Ký Tư Vấn -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn close-register-modal">&times;</span>
+            <h2>Đăng ký tư vấn tên miền</h2> 
+            <form id="registrationForm" action="https://formspree.io/f/xldojlkn" method="POST" class="mt-6 space-y-6">
+                <input type="hidden" name="_gotcha"> 
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="modal_name" class="block text-sm font-medium text-gray-700">Họ và tên</label>
+                        <div class="mt-1">
+                            <input type="text" name="Họ tên" id="modal_name" autocomplete="name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="modal_phone" class="block text-sm font-medium text-gray-700">Số điện thoại <span class="text-red-500">(Bắt buộc)</span></label>
+                        <div class="mt-1">
+                            <input type="tel" name="Số điện thoại" id="modal_phone" autocomplete="tel" required class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="modal_message" class="block text-sm font-medium text-gray-700">Nội dung yêu cầu</label>
+                    <div class="mt-1">
+                        <textarea id="modal_message" name="Nội dung thêm" rows="4" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md" placeholder="Ví dụ: Tôi muốn đăng ký tên miền abc.com"></textarea>
+                    </div>
+                </div>
+                <div id="form-status" class="text-center text-sm"></div>
+                <div class="text-right">
+                    <button type="submit" id="submitButton" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50">
+                        <i data-lucide="send" class="mr-2 -ml-1 h-5 w-5"></i>
+                        Gửi yêu cầu đăng ký
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Success Message Div -->
+    <div id="success-message">
+        Yêu cầu đã được gửi! Chúng tôi sẽ liên hệ lại sớm.
+    </div>
+
+    <!-- Scripts -->
+    <!-- Thư viện Lucide Icons (Giữ lại CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    <!-- Thư viện Confetti (Giữ lại CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <!-- Liên kết đến JS riêng (Sẽ tạo file này sau) -->
+    <script src="assets/js/page-domain.js"></script> 
+
+</body>
+</html>

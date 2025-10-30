@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hosting - Fi.tallest</title> 
+  
+  <!-- Tailwind CSS (Giữ lại CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script> 
+  
+  <!-- Google Fonts (Giữ lại link gốc) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- Liên kết đến CSS riêng (Sẽ tạo file này sau) -->
+  <link rel="stylesheet" href="assets/css/page-hosting.css"> 
+</head>
+<body class="bg-gray-50"> 
+  <!-- Bỏ Header/Footer/Nút liên hệ theo yêu cầu giữ nguyên -->
+
+  <main>
+    <!-- NỘI DUNG CHÍNH (BẢNG GIÁ) -->
+    <div id="main-content-wrapper" class="hosting-container">
+      <h1>BẢNG GIÁ PHÍ DỊCH VỤ DUY TRÌ HÀNG NĂM</h1>
+      <p style="text-align:center; font-style:italic;">PHÍ DỊCH VỤ THUÊ HOSTING (Đã bao gồm VAT 8%)</p>
+
+      <div class="overview-btn-container">
+        <button id="show-overview-btn" class="overview-btn">Tổng Quan Dịch Vụ Chăm Sóc</button>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="tab1">Hosting Cá Nhân</div>
+        <div class="tab" data-tab="tab2">Hosting Doanh Nghiệp</div>
+        <div class="tab" data-tab="tab3">Hosting Siêu Doanh Nghiệp</div>
+      </div>
+
+      <!-- TAB 1: Hosting Cá Nhân -->
+      <div id="tab1" class="tab-content active">
+        <div class="table-wrapper">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th class="header-cell col1">3GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col2">5GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col3">7GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col4">10GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col5">16GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col6">20GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col7">25GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col8">30GB<br><small>Dung lượng</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>70GB<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td></tr>
+              <tr><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td></tr>
+              <tr><td>3<br>&#128179; Mysql</td><td>5<br>&#128179; Mysql</td><td>7<br>&#128179; Mysql</td><td>10<br>&#128179; Mysql</td><td>16<br>&#128179; Mysql</td><td>20<br>&#128179; Mysql</td><td>25<br>&#128179; Mysql</td><td>30<br>&#128179; Mysql</td></tr>
+              <tr><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td></tr>
+              <tr><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td></tr>
+              <tr>
+                <td><span class="price-month">282.000 VND/Tháng</span><br><span class="price-year">3.348.000 VND/Năm</span></td>
+                <td><span class="price-month">406.000 VND/Tháng</span><br><span class="price-year">4.872.000 VND/Năm</span></td>
+                <td><span class="price-month">500.000 VND/Tháng</span><br><span class="price-year">6.000.000 VND/Năm</span></td>
+                <td><span class="price-month">600.000 VND/Tháng</span><br><span class="price-year">7.200.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-cn-10gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">840.000 VND/Tháng</span><br><span class="price-year">10.080.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-cn-16gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.000.000 VND/Tháng</span><br><span class="price-year">12.000.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-cn-20gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.200.000 VND/Tháng</span><br><span class="price-year">14.400.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-cn-25gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.340.000 VND/Tháng</span><br><span class="price-year">16.080.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-cn-30gb">Xem dịch vụ</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 2: Hosting Doanh Nghiệp -->
+      <div id="tab2" class="tab-content">
+        <div class="table-wrapper">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th class="header-cell col1">10GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col2">16GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col3">20GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col4">25GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col5">30GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col6">35GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col7">40GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col8">50GB<br><small>Dung lượng</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td></tr>
+              <tr><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td></tr>
+              <tr><td>10<br>&#128179; Mysql</td><td>16<br>&#128179; Mysql</td><td>20<br>&#128179; Mysql</td><td>25<br>&#128179; Mysql</td><td>30<br>&#128179; Mysql</td><td>35<br>&#128179; Mysql</td><td>40<br>&#128179; Mysql</td><td>50<br>&#128179; Mysql</td></tr>
+              <tr><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td></tr>
+              <tr><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td></tr>
+              <tr>
+                <td><span class="price-month">600.000 VND/Tháng</span><br><span class="price-year">7.200.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-dn-10gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">840.000 VND/Tháng</span><br><span class="price-year">10.080.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-dn-16gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.000.000 VND/Tháng</span><br><span class="price-year">12.000.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-dn-20gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.200.000 VND/Tháng</span><br><span class="price-year">14.400.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-dn-25gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.340.000 VND/Tháng</span><br><span class="price-year">16.080.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-dn-30gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.550.000 VND/Tháng</span><br><span class="price-year">18.600.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-dn-35gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.670.000 VND/Tháng</span><br><span class="price-year">20.080.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-dn-40gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">2.000.000 VND/Tháng</span><br><span class="price-year">24.000.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-dn-50gb">Xem dịchvụ</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 3: Hosting Siêu Doanh Nghiệp -->
+      <div id="tab3" class="tab-content">
+        <div class="table-wrapper">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th class="header-cell col1">10GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col2">20GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col3">30GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col4">50GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col5">70GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col6">100GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col7">200GB<br><small>Dung lượng</small></th>
+                <th class="header-cell col8">1TB<br><small>Dung lượng</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td><td>KGH<br>&#8644; Băng thông</td></tr>
+              <tr><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td><td>KGH<br>&#127760; Subdomain</td></tr>
+              <tr><td>10<br>&#128179; Mysql</td><td>20<br>&#128179; Mysql</td><td>30<br>&#128179; Mysql</td><td>50<br>&#128179; Mysql</td><td>70<br>&#128179; Mysql</td><td>100<br>&#128179; Mysql</td><td>200<br>&#128179; Mysql</td><td>1000<br>&#128179; Mysql</td></tr>
+              <tr><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td><td>KGH<br>&#9993; Địa chỉ Mail</td></tr>
+              <tr><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td><td>Miễn phí<br>&#9729; Backup</td></tr>
+              <tr>
+                <td><span class="price-month">600.000 VND/Tháng</span><br><span class="price-year">7.200.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-sdn-10gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.000.000 VND/Tháng</span><br><span class="price-year">12.000.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-sdn-20gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">1.340.000 VND/Tháng</span><br><span class="price-year">16.080.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-sdn-30gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">2.000.000 VND/Tháng</span><br><span class="price-year">24.000.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-sdn-50gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">2.670.000 VND/Tháng</span><br><span class="price-year">32.004.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-sdn-70gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">3.600.000 VND/Tháng</span><br><span class="price-year">43.200.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-sdn-100gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">6.000.000 VND/Tháng</span><br><span class="price-year">72.000.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-sdn-200gb">Xem dịch vụ</button></td>
+                <td><span class="price-month">17.900.000 VND/Tháng</span><br><span class="price-year">192.000.000 VND/Năm</span><br><button class="service-btn" data-modal="modal-sdn-1tb">Xem dịch vụ</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        Tổng quan cấu hình: Server IBM/CISCO/INTEL với 2 CPU Intel Xeon Quad Core, Công nghệ siêu phân luồng với 16 Core & công nghệ lưu trữ nhanh nhất SSD RAID 10
+      </div>
+    </div> 
+
+    <!-- TRANG TỔNG QUAN (MIND MAP) -->
+    <div id="overview-page-wrapper">
+      <div class="overview-container">
+        <button class="back-btn" id="hide-overview-btn">&#8592; Quay Về Trang Bảng Giá</button>
+        <h1 style="text-align: left;">Tổng Quan Dịch Vụ Chăm Sóc Website Theo Gói Hosting</h1>
+        <div class="mind-map" id="mindMapRoot">
+            <!-- CẤP 1 - GỐC -->
+          <div class="mind-map-root">
+            <div class="mind-map-node-container is-leaf"> 
+              <span class="mind-map-node root-node">Dịch Vụ Chăm Sóc Website Theo Gói Hosting</span>
+            </div>
+          </div>
+          <!-- CẤP 2 - Các nhánh chính -->
+          <div class="mind-map-level level-2">
+            <!-- NHÁNH 1: Quản Lý Nội Dung -->
+            <div class="mind-map-branch">
+              <div class="mind-map-node-container">
+                <span class="toggle">-</span>
+                <span class="mind-map-node main-branch">Quản Lý Nội Dung Website</span>
+              </div>
+              <!-- CẤP 3 -->
+              <div class="mind-map-level level-3">
+                <div class="mind-map-branch">
+                  <div class="mind-map-node-container">
+                    <span class="toggle">+</span>
+                    <span class="mind-map-node">Đăng Tải Sản Phẩm/Bài Viết</span>
+                  </div>
+                  <!-- CẤP 4 -->
+                  <div class="mind-map-level level-4 collapsed">
+                    <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Cung cấp nội dung, thông tin, hình ảnh (KH)</span></div></div>
+                    <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Số lượng tối đa tùy gói (15 - 50 bài)</span></div></div>
+                  </div>
+                </div>
+                <div class="mind-map-branch">
+                  <div class="mind-map-node-container">
+                    <span class="toggle">+</span><span class="mind-map-node">Cập Nhật Thông Tin Công Ty</span>
+                  </div>
+                   <div class="mind-map-level level-4 collapsed">
+                    <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Tên công ty</span></div></div>
+                    <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Địa chỉ, SĐT, Email</span></div></div>
+                  </div>
+                </div>
+                <div class="mind-map-branch">
+                  <div class="mind-map-node-container">
+                    <span class="toggle">+</span><span class="mind-map-node">Thiết Kế Hình Ảnh Chuyên Nghiệp</span>
+                  </div>
+                   <div class="mind-map-level level-4 collapsed">
+                    <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Cập nhật vào vị trí quan trọng...</span></div></div>
+                    <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Số lượng tối đa tùy gói (2 - 5 hình)</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!-- NHÁNH 2: SEO -->
+            <div class="mind-map-branch">
+              <div class="mind-map-node-container">
+                <span class="toggle">-</span><span class="mind-map-node main-branch">Tối Ưu Hóa (SEO)</span>
+              </div>
+              <div class="mind-map-level level-3">
+                <div class="mind-map-branch">
+                  <div class="mind-map-node-container">
+                    <span class="toggle">+</span><span class="mind-map-node">Triển Khai SEO Cơ Bản</span>
+                  </div>
+                  <div class="mind-map-level level-4 collapsed">
+                      <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Cài Đặt Công cụ quản lý SEO...</span></div></div>
+                      <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Tạo file robots.txt, sitemap.xml</span></div></div>
+                      <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Viết bài chuẩn SEO (>1000 từ)</span></div></div>
+                      <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Tạo link nội bộ (tăng thời gian Onsite)</span></div></div>
+                  </div>
+                </div>
+                <div class="mind-map-branch">
+                  <div class="mind-map-node-container">
+                    <span class="toggle">+</span><span class="mind-map-node">Đánh Giá & Tối Ưu Nâng Cao (Gói 20GB+)</span>
+                  </div>
+                  <div class="mind-map-level level-4 collapsed">
+                      <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Kiểm tra và đánh giá SEO On-Page</span></div></div>
+                      <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Đánh giá hiệu suất tìm kiếm...</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!-- NHÁNH 3: Tiện Ích & Pháp Lý -->
+            <div class="mind-map-branch">
+              <div class="mind-map-node-container">
+                  <span class="toggle">-</span><span class="mind-map-node main-branch">Tiện Ích và Pháp Lý</span>
+              </div>
+              <div class="mind-map-level level-3">
+                  <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node">Tiện Ích Trực Tuyến</span></div></div>
+                  <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node">Hỗ Trợ Pháp Lý</span></div></div>
+              </div>
+            </div>
+             <!-- NHÁNH 4: Tiếp Thị & Xã Hội -->
+            <div class="mind-map-branch">
+              <div class="mind-map-node-container">
+                <span class="toggle">-</span><span class="mind-map-node main-branch">Tiếp Thị & Xã Hội (Gói 20GB+)</span>
+              </div>
+              <div class="mind-map-level level-3">
+                  <div class="mind-map-branch">
+                      <div class="mind-map-node-container"><span class="toggle">+</span><span class="mind-map-node">Quản Lý Google</span></div>
+                      <div class="mind-map-level level-4 collapsed">
+                          <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Tạo địa chỉ mới trên Google Maps</span></div></div>
+                          <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Đăng ký Google Business</span></div></div>
+                          <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Liên kết quản lý địa điểm Google Maps</span></div></div>
+                      </div>
+                  </div>
+                  <div class="mind-map-branch">
+                      <div class="mind-map-node-container"><span class="toggle">+</span><span class="mind-map-node">Hỗ Trợ Mạng Xã Hội (MXH)</span></div>
+                      <div class="mind-map-level level-4 collapsed">
+                          <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Đăng ký tài khoản MXH...</span></div></div>
+                          <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Hướng dẫn tạo liên kết...</span></div></div>
+                      </div>
+                  </div>
+                   <div class="mind-map-branch">
+                      <div class="mind-map-node-container"><span class="toggle">+</span><span class="mind-map-node">Quản Lý Facebook</span></div>
+                      <div class="mind-map-level level-4 collapsed">
+                          <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Hỗ trợ tạo Fanpage Facebook</span></div></div>
+                          <div class="mind-map-branch"><div class="mind-map-node-container is-leaf"><span class="toggle is-leaf"></span><span class="mind-map-node note">Viết/tạo bài đăng... (Gói 30GB+)</span></div></div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+    </div>
+  </main>
+
+  <!-- MODALS (Giữ nguyên) -->
+    <!-- Modals cho Hosting Cá Nhân -->
+  <div id="modal-cn-10gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Cá Nhân 10GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 15 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 2 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (1 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+        </ul>
+  </div></div>
+  <div id="modal-cn-16gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Cá Nhân 16GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 15 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 2 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (1 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+        </ul>
+  </div></div>
+  <div id="modal-cn-20gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Cá Nhân 20GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 20 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (3 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+        </ul>
+  </div></div>
+  <div id="modal-cn-25gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Cá Nhân 25GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 20 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (3 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+        </ul>
+  </div></div>
+  <div id="modal-cn-30gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Cá Nhân 30GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 25 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (4 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (1 bài/tháng)</li>
+        </ul>
+  </div></div>
+  <!-- Modals cho Hosting Doanh Nghiệp -->
+  <div id="modal-dn-10gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Doanh Nghiệp 10GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 15 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 2 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (1 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+        </ul>
+  </div></div>
+  <div id="modal-dn-16gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Doanh Nghiệp 16GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 15 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 2 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (1 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+        </ul>
+  </div></div>
+  <div id="modal-dn-20gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Doanh Nghiệp 20GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 20 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (3 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+        </ul>
+  </div></div>
+  <div id="modal-dn-25gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Doanh Nghiệp 25GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 20 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (3 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+        </ul>
+  </div></div>
+  <div id="modal-dn-30gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Doanh Nghiệp 30GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 25 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (4 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (1 bài/tháng)</li>
+        </ul>
+  </div></div>
+  <div id="modal-dn-35gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Doanh Nghiệp 35GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 25 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (4 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (1 bài/tháng)</li>
+        </ul>
+  </div></div>
+  <div id="modal-dn-40gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Doanh Nghiệp 40GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 25 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (4 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (1 bài/tháng)</li>
+        </ul>
+  </div></div>
+  <div id="modal-dn-50gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Doanh Nghiệp 50GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 30 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 5 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (5 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (2 bài/tháng)</li>
+          <li>Hỗ trợ đăng ký DMCA</li>
+        </ul>
+  </div></div>
+  <!-- Modals cho Hosting Siêu Doanh Nghiệp -->
+  <div id="modal-sdn-10gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Siêu DN 10GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 15 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 2 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (1 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+        </ul>
+  </div></div>
+  <div id="modal-sdn-20gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Siêu DN 20GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 20 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (3 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+        </ul>
+  </div></div>
+  <div id="modal-sdn-30gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Siêu DN 30GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 25 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 3 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (4 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (1 bài/tháng)</li>
+        </ul>
+  </div></div>
+  <div id="modal-sdn-50gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Siêu DN 50GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 30 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 5 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (5 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (2 bài/tháng)</li>
+          <li>Hỗ trợ đăng ký DMCA</li>
+        </ul>
+  </div></div>
+  <div id="modal-sdn-70gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Siêu DN 70GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 35 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 5 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (6 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (4 bài/tháng)</li>
+          <li>Hỗ trợ đăng ký DMCA</li>
+        </ul>
+  </div></div>
+  <div id="modal-sdn-100gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Siêu DN 100GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 40 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 5 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (10 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (6 bài/tháng)</li>
+          <li>Hỗ trợ đăng ký DMCA</li>
+        </ul>
+  </div></div>
+  <div id="modal-sdn-200gb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Siêu DN 200GB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 50 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 5 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (15 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (10 bài/tháng)</li>
+          <li>Hỗ trợ đăng ký DMCA</li>
+        </ul>
+  </div></div>
+  <div id="modal-sdn-1tb" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Dịch vụ chăm sóc (Siêu DN 1TB)</h2>
+      <ul>
+          <li>Hỗ trợ đăng sản phẩm/bài viết lên website (Tối đa 50 bài)</li>
+          <li>Hỗ trợ cập nhật đầy đủ thông tin công ty</li>
+          <li>Thiết kế HÌNH ẢNH chuyên nghiệp (Tối đa 5 hình)</li>
+          <li>Cài đặt/thiết lập các tiện ích chat online</li>
+          <li>Cài đặt các công cụ quản lý SEO website</li>
+          <li>Tạo file robots.txt , sitemap.xml</li>
+          <li>Hỗ trợ hướng dẫn khai báo website với BỘ CÔNG THƯƠNG</li>
+          <li>Viết bài chuẩn SEO (>1000 từ) (15 bài/tháng)</li>
+          <li>TẠO LINK NỘI BỘ giữa các bài viết</li>
+          <li>Kiểm tra và đánh giá SEO On-Page (sau 2 tháng)</li>
+          <li>Kiểm tra và đánh giá hiệu suất tìm kiếm GSC (sau 2 tháng)</li>
+          <li>Hỗ trợ tạo địa chỉ mới trên Google Maps</li>
+          <li>Hỗ trợ đăng ký Google Business</li>
+          <li>Hỗ trợ đăng ký các tài khoản MXH</li>
+          <li>Hướng dẫn tạo liên kết, chia sẻ trên các MXH</li>
+          <li>Hỗ trợ tạo Fanpage Facebook</li>
+          <li>Viết tạo bài đăng trên Fanpage (10 bài/tháng)</li>
+          <li>Hỗ trợ đăng ký DMCA</li>
+        </ul>
+  </div></div>
+  <!-- Bỏ Footer -->
+  <!-- Bỏ Nút liên hệ nổi -->
+  
+  <!-- Liên kết đến JS riêng (Sẽ tạo file này sau) -->
+  <!-- Thêm script Lucide trước script riêng -->
+  <script src="https://unpkg.com/lucide@latest"></script> 
+  <script src="assets/js/page-hosting.js"></script> 
+
+</body>
+</html>

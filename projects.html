@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự Án Đã Thực Hiện - Fi.tallest</title>
+    <meta name="description" content="Khám phá các dự án website và ứng dụng đa dạng đã được Fi.tallest thực hiện, bao gồm website TMĐT, ứng dụng sức khỏe, website doanh nghiệp, landing page, blog, và nhiều hơn nữa.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Link CSS chung -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link CSS riêng -->
+    <link rel="stylesheet" href="assets/css/page-projects.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Navbar -->
+    <header class="bg-white/90 sticky top-0 z-50 backdrop-blur-md border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600"> 
+                        Fi.tallest 
+                    </a>
+                </div>
+                
+                <!-- Menu cho Desktop -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html#about" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Giới thiệu</a>
+                    <a href="index.html#services" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Dịch vụ</a>
+                    <a href="projects.html" class="text-indigo-600 font-semibold transition duration-150">Dự án</a> 
+                    <a href="hosting.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Hosting</a>
+                    <a href="domain.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Tên miền</a>
+                    <a href="bao-gia.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Báo Giá</a>
+                    <a href="index.html#contact" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Liên hệ ngay
+                    </a>
+                </div>
+                
+                <!-- Nút Menu cho Mobile -->
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                        <span class="sr-only">Mở menu</span>
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#about" class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Giới thiệu</a>
+                <a href="index.html#services" class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Dịch vụ</a>
+                <a href="projects.html" class="text-indigo-700 bg-indigo-50 block px-3 py-2 rounded-md text-base font-medium">Dự án</a>
+                <a href="hosting.html" class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Hosting</a>
+                <a href="domain.html" class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Tên miền</a>
+                <a href="bao-gia.html" class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Báo Giá</a>
+                <a href="index.html#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Liên hệ ngay</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-900">Dự Án Nổi Bật</h1>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Khám phá các dự án website và ứng dụng đa dạng mà tôi đã thực hiện.</p>
+            </div>
+
+            <!-- Lưới dự án - Dữ liệu sẽ được load từ JS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Nội dung sẽ được thay thế bởi JavaScript -->
+                <div class="col-span-full text-center py-12">
+                    <p class="text-gray-500">Đang tải dự án...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-base text-gray-400">&copy; 2025 Fi.tallest. Mọi quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <div class="fixed right-4 bottom-4 md:top-1/2 md:-translate-y-1/2 z-[1000] flex flex-col gap-3">
+        <a href="tel:0909876817" 
+           class="bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition transform hover:scale-110"
+           aria-label="Gọi ngay" title="Gọi ngay (0909876817)">
+            <i data-lucide="phone" class="w-6 h-6"></i>
+        </a>
+        <a href="https://zalo.me/0909876817" target="_blank" rel="noopener noreferrer"
+           class="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition transform hover:scale-110"
+           aria-label="Nhắn Zalo" title="Nhắn Zalo (0909876817)">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+        </a>
+    </div>
+
+    <!-- 
+      THỨ TỰ LOAD SCRIPT QUAN TRỌNG:
+      1. Lucide + Main.js (menu)
+      2. project-data.js (dữ liệu) - PHẢI TRƯỚC page-projects.js
+      3. page-projects.js (logic hiển thị)
+    -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/project-data.js"></script>
+    <script src="assets/js/page-projects.js"></script>
+</body>
+</html>
