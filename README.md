@@ -6,8 +6,8 @@
 
 ## 🚀 Live Demo
 
-**Website:** [https://username.github.io/portfolio-website/](https://username.github.io/portfolio-website/)  
-*(Thay `username` bằng tên GitHub của bạn)*
+**Website:** [https://fitallest.github.io/portfolio/](https://fitallest.github.io/portfolio/)  
+
 
 ---
 
@@ -57,12 +57,12 @@ fi.tallest/
 1. Fork repo này
 2. Vào **Settings** → **Pages**
 3. Chọn **main branch** → **Save**
-4. Truy cập `https://username.github.io/portfolio-website/`
+4. Truy cập `https://fitallest.github.io/portfolio/`
 
 ### Chạy local
 
 ```bash
-git clone https://github.com/username/portfolio-website.git
+git clone https://github.com/fitallest/portfolio.git
 cd portfolio-website
 open index.html
 ```
