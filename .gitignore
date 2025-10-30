@@ -1,0 +1,38 @@
+# .gitignore - Đặt ở thư mục gốc dự án
+
+# ====================
+# FILE ADMIN (BẢO MẬT)
+# ====================
+# QUAN TRỌNG: Không push admin page lên GitHub
+admin-projects.html
+
+# ====================
+# FILE HỆ THỐNG
+# ====================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# ====================
+# IDE / EDITOR
+# ====================
+.vscode/
+.idea/
+*.sublime-*
+
+# ====================
+# BACKUP FILES
+# ====================
+*.bak
+*.tmp
+*.log
+*.old
+
+# ====================
+# NODE (nếu sau này dùng build tools)
+# ====================
+node_modules/
+package-lock.json
