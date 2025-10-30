@@ -1,0 +1,32 @@
+/* CSS CHUNG (style.css)
+  Bao gồm font 'Inter' và các style cơ bản dùng cho MỌI trang.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Style chung cho thông báo thành công (dùng ở index.html, domain.html) 
+*/
+#success-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745; /* Màu xanh lá cây */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 2000;
+    display: none; /* Ẩn ban đầu */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#success-message.show {
+    display: block;
+    opacity: 1;
+}

@@ -1,0 +1,96 @@
+/*
+  CSS RIÊNG CHO TRANG BÁO GIÁ (page-baogia.css)
+  Đã tách từ thẻ <style> inline và loại bỏ font import.
+*/
+
+/* BỎ: @import url('...') font Inter (Đã có trong style.css) */
+
+body {
+    /* BỎ: font-family (Đã có trong style.css) */
+    background-color: #f7f9fc;
+    /* Giữ padding cho thanh trượt */
+    padding-bottom: 150px; 
+}
+
+/* Các style còn lại giữ nguyên từ file gốc */
+.icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    border-color: transparent;
+    /* Đổi màu nasani-primary thành indigo-600 */
+    background-color: #4f46e5; 
+}
+input[type="checkbox"], input[type="radio"] {
+    appearance: none;
+    border-radius: 0.25rem;
+    border: 1px solid #d1d5db;
+}
+
+.hidden-hosting-packages {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.hidden-hosting-packages.expanded {
+    max-height: 3000px;
+}
+
+input[name="industry-option"] {
+    display: none;
+}
+
+label.industry-label {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: #e5e7eb;
+}
+
+input[name="industry-option"]:checked + label.industry-label {
+    /* Đổi màu nasani-primary thành indigo-600, nasani-light thành indigo-50 */
+    border-color: #4f46e5; 
+    background-color: #eef2ff; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.addon-group {
+    display: none;
+}
+
+#alert-modal {
+    transition: opacity 0.3s ease;
+}
+
+/* Thanh trượt báo giá */
+#quote-details-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#quote-details-panel.expanded {
+    max-height: 500px; 
+}
+#quote-toggle-icon {
+    transition: transform 0.3s ease;
+}
+#quote-summary-footer.panel-open #quote-toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* THÊM: CSS cho màu sắc mới đã thay trong HTML (Nếu không dùng Tailwind classes trực tiếp) */
+/* Ví dụ: */
+/* .text-nasani-primary { color: #4f46e5; } */
+/* .border-nasani-primary { border-color: #4f46e5; } */
+/* .bg-nasani-primary { background-color: #4f46e5; } */
+/* .focus\:ring-nasani-primary:focus { --tw-ring-color: #4f46e5; } */
+/* .bg-nasani-light { background-color: #eef2ff; } */
+
+/* .text-hospital-theme { color: #06b6d4; } */
+/* .border-hospital-theme { border-color: #06b6d4; } */
+/* .bg-hospital-theme { background-color: #06b6d4; } */
