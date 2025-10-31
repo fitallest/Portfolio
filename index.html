@@ -1,901 +1,661 @@
-	<!DOCTYPE html>
-	<html lang="vi" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Fi.tallest - Thiết Kế Website & Ứng dụng</title>
-		<!-- THÊM MỚI: Meta Description chuẩn SEO -->
-		<meta name="description" content="Thiết kế website và ứng dụng chuyên nghiệp, tinh tế. Dịch vụ UI/UX, phát triển web, app. Liên hệ Fi.tallest để được tư vấn.">
-		
-		<!-- Tải TailwindCSS từ CDN -->
-		<script src="https://cdn.tailwindcss.com"></script>
-		
-		<!-- XÓA: Các link CDN của Lucide, Confetti (sẽ tải ở cuối body) -->
-		<!-- XÓA: Toàn bộ thẻ <style> inline -->
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fi.tallest - Thiết Kế Website & Ứng dụng</title>
+	<meta name="description" content="Thiết kế website và ứng dụng chuyên nghiệp, tinh tế. Dịch vụ UI/UX, phát triển web, app. Liên hệ Fi.tallest để được tư vấn.">
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+	
+	<link rel="stylesheet" href="assets/css/style.css">
 
-		<!-- THÊM MỚI: Link đến tệp CSS chung -->
-		<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50">
 
-	</head>
-	<body class="bg-gray-50">
-
-		<!-- Header & Navbar (Sticky) -->
-		<header class="bg-white/90 sticky top-0 z-50 backdrop-blur-md border-b border-gray-200">
-			<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex justify-between items-center h-16">
-					<!-- Logo / Tên thương hiệu -->
-					<div class="flex-shrink-0 flex items-center">
-						<a href="" >
-						<img src=  "assets/images/logo.png"
-							alt="Logo F17" 
-							style="height: 100px; object-fit: co12tain;">
-						</a>
-					</div>
-					
-					<!-- Menu cho Desktop -->
-					<div class="hidden md:flex md:items-center md:space-x-8">
-						<a href="#about" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Giới thiệu</a>
-						<a href="#services" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Dịch vụ</a>
-						<a href="#projects" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Dự án</a>
-						<a href="hosting.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Hosting</a>
-						<a href="domain.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Tên miền</a>
-						<!-- CẬP NHẬT: Đổi tên file báo giá -->
-						<a href="bao-gia.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Báo Giá</a>
-						<a href="#contact" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							Liên hệ ngay
-						</a>
-					</div>
-					
-					<!-- Nút Menu cho Mobile -->
-					<div class="-mr-2 flex items-center md:hidden">
-						<button type="button" id="mobile-menu-button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-							<span class="sr-only">Mở menu</span>
-							<i data-lucide="menu" class="h-6 w-6"></i>
-						</button>
-					</div>
+	<header class="bg-white/90 sticky top-0 z-50 backdrop-blur-md border-b border-gray-200">
+		<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<div class="flex-shrink-0 flex items-center">
+					<a href="">
+						<img src="assets/images/logo.png"
+							alt="Logo F17"
+							style="height: 100px; object-fit: contain;">
+					</a>
 				</div>
-			</nav>
-
-			<!-- Menu Mobile (ẩn mặc định) -->
-			<div class="hidden md:hidden" id="mobile-menu">
-				<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-					<a href="#about" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Giới thiệu</a>
-					<a href="#services" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Dịch vụ</a>
-					<a href="#projects" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Dự án</a>
-					<a href="hosting.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Hosting</a>
-					<a href="domain.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Tên miền</a>
-					<!-- CẬP NHẬT: Đổi tên file báo giá -->
-					<a href="bao-gia.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Báo Giá</a>
-					<a href="#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Liên hệ ngay</a>
+				
+				<div class="hidden md:flex md:items-center md:space-x-8">
+					<a href="#about" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Giới thiệu</a>
+					<a href="#services" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Dịch vụ</a>
+					<a href="#projects" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Dự án</a>
+					<a href="hosting.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Hosting</a>
+					<a href="domain.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Tên miền</a>
+					<a href="bao-gia.html" class="text-gray-500 font-medium hover:text-indigo-600 transition duration-150">Báo Giá</a>
+					<a href="#contact" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+						Liên hệ ngay
+					</a>
+				</div>
+				
+				<div class="-mr-2 flex items-center md:hidden">
+					<button type="button" id="mobile-menu-button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+						<span class="sr-only">Mở menu</span>
+						<i data-lucide="menu" class="h-6 w-6"></i>
+					</button>
 				</div>
 			</div>
-		</header>
+		</nav>
 
-		<main>
-			<!-- Hero Section với Video Background -->
-			<section id="hero" class="relative h-[calc(100vh-4rem)] w-full overflow-hidden">
-				<!-- 
-				  KHUYẾN NGHỊ: 
-				  Bạn nên tải tệp video này về và lưu vào thư mục 'assets/videos/'.
-				  Việc hotlink từ Pexels có thể bị chậm hoặc bị chặn.
-				-->
-				<video 
-					class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover transform -translate-x-1/2 -translate-y-1/2 z-0"
-					src="https://videos.pexels.com/video-files/7578543/7578543-hd_1920_1080_30fps.mp4" 
-					autoplay 
-					loop 
-					muted 
-					playsinline
-					poster="https://placehold.co/1920x1080/1e293b/ffffff?text=Video+Dang+Tai...">
-				</video>
-				<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/40 z-10"></div>
-				<div class="relative z-20 flex flex-col justify-center items-center h-full text-center max-w-4xl mx-auto px-4">
-					<span class="font-medium text-indigo-300">Thiết kế Web & Ứng dụng</span>
-					<h1 class="text-4xl md:text-5xl font-bold text-white mt-2 drop-shadow-lg">
-						Website chuyên nghiệp, <span class="text-indigo-400">tinh tế</span>
-					</h1>
-					<p class="mt-4 text-lg text-gray-200 drop-shadow-md">Thiết kế thanh lịch, sang trọng - Nâng tầm thương hiệu của bạn.</p>
-					<div class="mt-8 flex flex-wrap justify-center gap-4">
-						<a href="#projects" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
-							<i data-lucide="folder-kanban" class="mr-2 -ml-1 h-5 w-5"></i>
-							Xem dự án
-						</a>
-						<!-- CẬP NHẬT: Đổi tên file báo giá -->
-						<a href="bao-gia.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-900 bg-white hover:bg-gray-50">
-							<i data-lucide="dollar-sign" class="mr-2 -ml-1 h-5 w-5"></i>
-							Xem báo giá
-						</a>
-					</div>
+		<div class="hidden md:hidden" id="mobile-menu">
+			<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+				<a href="#about" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Giới thiệu</a>
+				<a href="#services" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Dịch vụ</a>
+				<a href="#projects" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Dự án</a>
+				<a href="hosting.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Hosting</a>
+				<a href="domain.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Tên miền</a>
+				<a href="bao-gia.html" class="text-gray-500 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Báo Giá</a>
+				<a href="#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Liên hệ ngay</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section id="hero" class="relative h-[calc(100vh-4rem)] w-full overflow-hidden">
+			<video
+				class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover transform -translate-x-1/2 -translate-y-1/2 z-0"
+				src="https://videos.pexels.com/video-files/7578543/7578543-hd_1920_1080_30fps.mp4"
+				autoplay
+				loop
+				muted
+				playsinline
+				poster="https://placehold.co/1920x1080/1e293b/ffffff?text=Video+Dang+Tai...">
+			</video>
+			<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/40 z-10"></div>
+			<div class="relative z-20 flex flex-col justify-center items-center h-full text-center max-w-4xl mx-auto px-4">
+				<span class="font-medium text-indigo-300">Thiết kế Web & Ứng dụng</span>
+				<h1 class="text-4xl md:text-5xl font-bold text-white mt-2 drop-shadow-lg">
+					Website chuyên nghiệp, <span class="text-indigo-400">tinh tế</span>
+				</h1>
+				<p class="mt-4 text-lg text-gray-200 drop-shadow-md">Thiết kế thanh lịch, sang trọng - Nâng tầm thương hiệu của bạn.</p>
+				<div class="mt-8 flex flex-wrap justify-center gap-4">
+					<a href="#projects" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+						<i data-lucide="folder-kanban" class="mr-2 -ml-1 h-5 w-5"></i>
+						Xem dự án
+					</a>
+					<a href="bao-gia.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-900 bg-white hover:bg-gray-50">
+						<i data-lucide="dollar-sign" class="mr-2 -ml-1 h-5 w-5"></i>
+						Xem báo giá
+					</a>
 				</div>
-			</section>
+			</div>
+		</section>
 
-			<!-- About Section -->
-			<section id="about" class="bg-white py-16 md:py-24">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-					<div class="flex-shrink-0 flex justify-center">
-						<!-- KHUYẾN NGHỊ: Tải ảnh về assets/images/fi-tallest-avatar.png -->
-						<img class="h-64 w-64 rounded-full shadow-xl object-cover" 
-							 src="https://placehold.co/256x256/e0e7ff/4f46e5?text=Fi.tallest" 
-							 alt="Ảnh Fi.tallest">
-					</div>
-					<div>
-						<h2 class="text-3xl font-bold text-gray-900">Giới thiệu về Fi.tallest</h2>
-						<p class="mt-4 text-lg text-gray-600">Xin chào! Tôi là một nhà thiết kế web và ứng dụng đam mê sáng tạo. Với nhiều năm kinh nghiệm, tôi chuyên biến những ý tưởng phức tạp thành các giao diện (UI/UX) đẹp mắt, trực quan và dễ sử dụng.</p>
-						<p class="mt-3 text-lg text-gray-600">Mục tiêu của tôi là tạo ra những sản phẩm không chỉ có tính thẩm mỹ cao mà còn mang lại hiệu quả kinh doanh rõ rệt cho khách hàng.</p>
-						<div class="mt-6">
-							<a href="#contact" class="inline-flex items-center px-5 py-2 border border-indigo-600 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-								<i data-lucide="send" class="mr-2 -ml-1 h-5 w-5"></i>
-								Liên hệ
-							</a>
-						</div>
-					</div>
+		<section id="about" class="bg-white py-16 md:py-24">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+				<div class="flex-shrink-0 flex justify-center">
+					<img class="h-64 w-64 rounded-full shadow-xl object-cover"
+						 src="https://placehold.co/256x256/e0e7ff/4f46e5?text=Fi.tallest"
+						 alt="Ảnh Fi.tallest">
 				</div>
-			</section>
-
-			<!-- Services Section -->
-			<section id="services" class="bg-gray-50 py-16 md:py-24">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="text-center">
-						<h2 class="text-3xl font-bold text-gray-900">Dịch vụ của tôi</h2>
-						<p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Cung cấp các giải pháp toàn diện từ thiết kế đến phát triển sản phẩm.</p>
-					</div>
-					<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-						<div class="bg-white p-6 rounded-lg shadow-lg">
-							<div class="flex-shrink-0">
-								<i data-lucide="layout-template" class="h-10 w-10 text-indigo-600"></i>
-							</div>
-							<h3 class="mt-4 text-xl font-bold text-gray-900">Thiết kế Website (UI/UX)</h3>
-							<p class="mt-2 text-base text-gray-600">Thiết kế giao diện độc quyền, tập trung vào trải nghiệm người dùng mượt mà và thân thiện trên mọi thiết bị (Responsive).</p>
-						</div>
-						<div class="bg-white p-6 rounded-lg shadow-lg">
-							<div class="flex-shrink-0">
-								<i data-lucide="code-2" class="h-10 w-10 text-indigo-600"></i>
-							</div>
-							<h3 class="mt-4 text-xl font-bold text-gray-900">Phát triển Website</h3>
-							<p class="mt-2 text-base text-gray-600">Xây dựng website hoàn chỉnh dựa trên các công nghệ hiện đại (HTML, CSS, JavaScript, React...), đảm bảo tốc độ và bảo mật.</p>
-						</div>
-						<div class="bg-white p-6 rounded-lg shadow-lg">
-							<div class="flex-shrink-0">
-								<i data-lucide="smartphone" class="h-10 w-10 text-indigo-600"></i>
-							</div>
-							<h3 class="mt-4 text-xl font-bold text-gray-900">Thiết kế Ứng dụng (App)</h3>
-							<p class="mt-2 text-base text-gray-600">Thiết kế giao diện cho ứng dụng di động (iOS & Android), tối ưu hóa từng thao tác để giữ chân người dùng.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Projects Section -->
-			<section id="projects" class="bg-white py-16 md:py-24">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="text-center">
-						<h2 class="text-3xl font-bold text-gray-900">Dự án đã thực hiện</h2>
-						<p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Một số dự án tiêu biểu tôi đã tham gia và hoàn thành.</p>
-					</div>
-					<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						<!-- Project 1 -->
-						<div class="group rounded-lg shadow-lg overflow-hidden">
-							<a href="#" class="block">
-								<!-- KHUYẾN NGHỊ: Tải ảnh về assets/images/project-1.jpg -->
-								<img src="https://placehold.co/600x400/e0e7ff/4f46e5?text=Du+An+1" alt="Dự án 1" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
-							</a>
-							<div class="p-6">
-								<span class="text-sm text-indigo-600 font-medium">Website Thương mại điện tử</span>
-								<h3 class="mt-1 text-xl font-bold text-gray-900">Dự án TechStore</h3>
-								<p class="mt-2 text-base text-gray-600">Thiết kế và phát triển website bán lẻ thiết bị công nghệ với giao diện hiện đại, tích hợp thanh toán.</p>
-							</div>
-						</div>
-						<!-- Project 2 -->
-						<div class="group rounded-lg shadow-lg overflow-hidden">
-							<a href="#" class="block">
-								<img src="https://placehold.co/600x400/c7d2fe/4338ca?text=Du+An+2" alt="Dự án 2" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
-							</a>
-							<div class="p-6">
-								<span class="text-sm text-indigo-600 font-medium">Ứng dụng Sức khỏe</span>
-								<h3 class="mt-1 text-xl font-bold text-gray-900">Ứng dụng HealthTrack</h3>
-								<p class="mt-2 text-base text-gray-600">Thiết kế UI/UX cho ứng dụng theo dõi sức khỏe cá nhân, tập trung vào sự đơn giản và dễ sử dụng.</p>
-							</div>
-						</div>
-						<!-- Project 3 -->
-						<div class="group rounded-lg shadow-lg overflow-hidden">
-							<a href="#" class="block">
-								<img src="https://placehold.co/600x400/a5b4fc/3730a3?text=Du+An+3" alt="Dự án 3" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
-							</a>
-							<div class="p-6">
-								<span class="text-sm text-indigo-600 font-medium">Website Doanh nghiệp</span>
-								<h3 class="mt-1 text-xl font-bold text-gray-900">Trang chủ Creative Inc.</h3>
-								<p class="mt-2 text-base text-gray-600">Website giới thiệu công ty thiết kế sáng tạo, với nhiều hiệu ứng và animation độc đáo.</p>
-							</div>
-						</div>
-						 <!-- Project 4 -->
-						 <div class="group rounded-lg shadow-lg overflow-hidden">
-							<a href="#" class="block">
-								<img src="https://placehold.co/600x400/818cf8/ede9fe?text=Du+An+4" alt="Dự án 4" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
-							</a>
-							<div class="p-6">
-								<span class="text-sm text-indigo-600 font-medium">Landing Page Sự kiện</span>
-								<h3 class="mt-1 text-xl font-bold text-gray-900">Trang Đăng ký Webinar</h3>
-								<p class="mt-2 text-base text-gray-600">Thiết kế landing page tối ưu chuyển đổi cho sự kiện trực tuyến, tích hợp form đăng ký.</p>
-							</div>
-						</div>
-						 <!-- Project 5 -->
-						 <div class="group rounded-lg shadow-lg overflow-hidden">
-							<a href="#" class="block">
-								<img src="https://placehold.co/600x400/6366f1/eef2ff?text=Du+An+5" alt="Dự án 5" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
-							</a>
-							<div class="p-6">
-								<span class="text-sm text-indigo-600 font-medium">Website Tin tức/Blog</span>
-								<h3 class="mt-1 text-xl font-bold text-gray-900">Blog Chia sẻ Kiến thức</h3>
-								<p class="mt-2 text-base text-gray-600">Xây dựng trang blog cá nhân với giao diện sạch sẽ, dễ đọc, tối ưu SEO cho bài viết.</p>
-							</div>
-						</div>
-						 <!-- Project 6 -->
-						 <div class="group rounded-lg shadow-lg overflow-hidden">
-							<a href="#" class="block">
-								<img src="https://placehold.co/600x400/4f46e5/ddd6fe?text=Du+An+6" alt="Dự án 6" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
-							</a>
-							<div class="p-6">
-								<span class="text-sm text-indigo-600 font-medium">Ứng dụng Đặt lịch</span>
-								<h3 class="mt-1 text-xl font-bold text-gray-900">App Đặt lịch Spa</h3>
-								<p class="mt-2 text-base text-gray-600">Thiết kế giao diện người dùng cho ứng dụng đặt lịch hẹn spa, đơn giản hóa quy trình booking.</p>
-							</div>
-						</div>
-					</div>
-					<div class="mt-12 text-center">
-						<a href="projects.html" class="inline-flex items-center px-6 py-3 border border-indigo-600 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 transition duration-150">
-							<i data-lucide="arrow-right" class="mr-2 -ml-1 h-5 w-5"></i>
-							Xem thêm dự án
+				<div>
+					<h2 class="text-3xl font-bold text-gray-900">Giới thiệu về Fi.tallest</h2>
+					<p class="mt-4 text-lg text-gray-600">Xin chào! Tôi là một nhà thiết kế web và ứng dụng đam mê sáng tạo. Với nhiều năm kinh nghiệm, tôi chuyên biến những ý tưởng phức tạp thành các giao diện (UI/UX) đẹp mắt, trực quan và dễ sử dụng.</p>
+					<p class="mt-3 text-lg text-gray-600">Mục tiêu của tôi là tạo ra những sản phẩm không chỉ có tính thẩm mỹ cao mà còn mang lại hiệu quả kinh doanh rõ rệt cho khách hàng.</p>
+					<div class="mt-6">
+						<a href="#contact" class="inline-flex items-center px-5 py-2 border border-indigo-600 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+							<i data-lucide="send" class="mr-2 -ml-1 h-5 w-5"></i>
+							Liên hệ
 						</a>
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
+
+		<section id="services" class="bg-gray-50 py-16 md:py-24">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center">
+					<h2 class="text-3xl font-bold text-gray-900">Dịch vụ của tôi</h2>
+					<p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Cung cấp các giải pháp toàn diện từ thiết kế đến phát triển sản phẩm.</p>
+				</div>
+				<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-white p-6 rounded-lg shadow-lg">
+						<div class="flex-shrink-0">
+							<i data-lucide="layout-template" class="h-10 w-10 text-indigo-600"></i>
+						</div>
+						<h3 class="mt-4 text-xl font-bold text-gray-900">Thiết kế Website (UI/UX)</h3>
+						<p class="mt-2 text-base text-gray-600">Thiết kế giao diện độc quyền, tập trung vào trải nghiệm người dùng mượt mà và thân thiện trên mọi thiết bị (Responsive).</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-lg">
+						<div class="flex-shrink-0">
+							<i data-lucide="code-2" class="h-10 w-10 text-indigo-600"></i>
+						</div>
+						<h3 class="mt-4 text-xl font-bold text-gray-900">Phát triển Website</h3>
+						<p class="mt-2 text-base text-gray-600">Xây dựng website hoàn chỉnh dựa trên các công nghệ hiện đại (HTML, CSS, JavaScript, React...), đảm bảo tốc độ và bảo mật.</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-lg">
+						<div class="flex-shrink-0">
+							<i data-lucide="smartphone" class="h-10 w-10 text-indigo-600"></i>
+						</div>
+						<h3 class="mt-4 text-xl font-bold text-gray-900">Thiết kế Ứng dụng (App)</h3>
+						<p class="mt-2 text-base text-gray-600">Thiết kế giao diện cho ứng dụng di động (iOS & Android), tối ưu hóa từng thao tác để giữ chân người dùng.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="projects" class="bg-white py-16 md:py-24">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center">
+					<h2 class="text-3xl font-bold text-gray-900">Dự án đã thực hiện</h2>
+					<p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Một số dự án tiêu biểu tôi đã tham gia và hoàn thành.</p>
+				</div>
+				<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="group rounded-lg shadow-lg overflow-hidden">
+						<a href="#" class="block">
+							<img src="https://placehold.co/600x400/e0e7ff/4f46e5?text=Du+An+1" alt="Dự án 1" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
+						</a>
+						<div class="p-6">
+							<span class="text-sm text-indigo-600 font-medium">Website Thương mại điện tử</span>
+							<h3 class="mt-1 text-xl font-bold text-gray-900">Dự án TechStore</h3>
+							<p class="mt-2 text-base text-gray-600">Thiết kế và phát triển website bán lẻ thiết bị công nghệ với giao diện hiện đại, tích hợp thanh toán.</p>
+						</div>
+					</div>
+					<div class="group rounded-lg shadow-lg overflow-hidden">
+						<a href="#" class="block">
+							<img src="https://placehold.co/600x400/c7d2fe/4338ca?text=Du+An+2" alt="Dự án 2" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
+						</a>
+						<div class="p-6">
+							<span class="text-sm text-indigo-600 font-medium">Ứng dụng Sức khỏe</span>
+							<h3 class="mt-1 text-xl font-bold text-gray-900">Ứng dụng HealthTrack</h3>
+							<p class="mt-2 text-base text-gray-600">Thiết kế UI/UX cho ứng dụng theo dõi sức khỏe cá nhân, tập trung vào sự đơn giản và dễ sử dụng.</p>
+						</div>
+					</div>
+					<div class="group rounded-lg shadow-lg overflow-hidden">
+						<a href="#" class="block">
+							<img src="https://placehold.co/600x400/a5b4fc/3730a3?text=Du+An+3" alt="Dự án 3" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
+						</a>
+						<div class="p-6">
+							<span class="text-sm text-indigo-600 font-medium">Website Doanh nghiệp</span>
+							<h3 class="mt-1 text-xl font-bold text-gray-900">Trang chủ Creative Inc.</h3>
+							<p class="mt-2 text-base text-gray-600">Website giới thiệu công ty thiết kế sáng tạo, với nhiều hiệu ứng và animation độc đáo.</p>
+						</div>
+					</div>
+					 <div class="group rounded-lg shadow-lg overflow-hidden">
+						<a href="#" class="block">
+							<img src="https://placehold.co/600x400/818cf8/ede9fe?text=Du+An+4" alt="Dự án 4" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
+						</a>
+						<div class="p-6">
+							<span class="text-sm text-indigo-600 font-medium">Landing Page Sự kiện</span>
+							<h3 class="mt-1 text-xl font-bold text-gray-900">Trang Đăng ký Webinar</h3>
+							<p class="mt-2 text-base text-gray-600">Thiết kế landing page tối ưu chuyển đổi cho sự kiện trực tuyến, tích hợp form đăng ký.</p>
+						</div>
+					</div>
+					 <div class="group rounded-lg shadow-lg overflow-hidden">
+						<a href="#" class="block">
+							<img src="https://placehold.co/600x400/6366f1/eef2ff?text=Du+An+5" alt="Dự án 5" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
+						</a>
+						<div class="p-6">
+							<span class="text-sm text-indigo-600 font-medium">Website Tin tức/Blog</span>
+							<h3 class="mt-1 text-xl font-bold text-gray-900">Blog Chia sẻ Kiến thức</h3>
+							<p class="mt-2 text-base text-gray-600">Xây dựng trang blog cá nhân với giao diện sạch sẽ, dễ đọc, tối ưu SEO cho bài viết.</p>
+						</div>
+					</div>
+					 <div class="group rounded-lg shadow-lg overflow-hidden">
+						<a href="#" class="block">
+							<img src="https://placehold.co/600x400/4f46e5/ddd6fe?text=Du+An+6" alt="Dự án 6" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300">
+						</a>
+						<div class="p-6">
+							<span class="text-sm text-indigo-600 font-medium">Ứng dụng Đặt lịch</span>
+							<h3 class="mt-1 text-xl font-bold text-gray-900">App Đặt lịch Spa</h3>
+							<p class="mt-2 text-base text-gray-600">Thiết kế giao diện người dùng cho ứng dụng đặt lịch hẹn spa, đơn giản hóa quy trình booking.</p>
+						</div>
+					</div>
+				</div>
+				<div class="mt-12 text-center">
+					<a href="projects.html" class="inline-flex items-center px-6 py-3 border border-indigo-600 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 transition duration-150">
+						<i data-lucide="arrow-right" class="mr-2 -ml-1 h-5 w-5"></i>
+						Xem thêm dự án
+					</a>
+				</div>
+			</div>
+		</section>
+		
+		<section id="achievements" class="relative overflow-hidden py-20 md:py-32">
+			<div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-700 to-blue-600"></div>
 			
-		<!-- Photo Collage Section - NEW -->
-			<section id="achievements" class="relative overflow-hidden py-20 md:py-32">
-				<!-- Background Gradient giống Mona -->
-				<div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-700 to-blue-600"></div>
-				
-				<!-- Decorative waves -->
-				<div class="absolute bottom-0 left-0 right-0">
-					<svg viewBox="0 0 1440 320" class="w-full h-auto">
-						<path fill="rgba(79, 70, 229, 0.3)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-					</svg>
-				</div>
-
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-					<!-- Header -->
-					<div class="text-center mb-16">
-						<div class="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-							<p class="text-white text-sm font-semibold tracking-wide uppercase">Hơn 3 năm kinh nghiệm</p>
-						</div>
-						<h2 class="text-5xl md:text-6xl font-extrabold text-white mb-4">
-							<span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">
-								12.000+
-							</span>
-						</h2>
-						<p class="text-2xl md:text-3xl text-purple-100 font-bold mb-2">Dự án đã thực hiện & Vận hành</p>
-						<p class="text-lg text-purple-200/80">Đồng hành cùng hàng nghìn doanh nghiệp trên toàn quốc</p>
-					</div>
-
-					<!-- Photo Collage Grid -->
-					<div class="relative">
-						<!-- Grid container với các ảnh được sắp xếp nghệ thuật -->
-						<div class="grid grid-cols-12 gap-3 md:gap-4">
-							
-							<!-- Column 1 -->
-							<div class="col-span-3 space-y-3 md:space-y-4">
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-2deg] hover:rotate-0">
-									<img src="https://placehold.co/300x400/6366f1/ffffff?text=Team+Meeting" alt="Team 1" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-									<div class="absolute -bottom-2 -right-2 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 shadow-lg">
-										<p class="text-xs font-bold text-purple-900">Đào tạo nội bộ</p>
-									</div>
-								</div>
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[3deg] hover:rotate-0">
-									<img src="https://placehold.co/300x350/8b5cf6/ffffff?text=Workshop" alt="Workshop" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-								</div>
-							</div>
-
-							<!-- Column 2 -->
-							<div class="col-span-3 space-y-3 md:space-y-4 mt-8">
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[2deg] hover:rotate-0">
-									<img src="https://placehold.co/300x300/a78bfa/ffffff?text=Success" alt="Success" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-								</div>
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-3deg] hover:rotate-0">
-									<img src="https://placehold.co/300x400/c4b5fd/ffffff?text=Team+2" alt="Team 2" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-									<div class="absolute -top-2 -left-2 bg-yellow-400 text-purple-900 rounded-full w-12 h-12 flex items-center justify-center shadow-lg font-bold text-xs transform rotate-12">
-										NEW
-									</div>
-								</div>
-							</div>
-
-							<!-- Column 3 - Center Large -->
-							<div class="col-span-3 flex items-center">
-								<div class="photo-card transform hover:scale-105 transition duration-500">
-									<img src="https://placehold.co/400x500/ec4899/ffffff?text=Main+Project" alt="Main" class="w-full h-auto rounded-xl shadow-2xl border-8 border-white/30">
-									<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl"></div>
-									<div class="absolute bottom-4 left-4 right-4 text-white">
-										<p class="text-xl font-bold mb-1">Dự án nổi bật 2024</p>
-										<p class="text-sm opacity-90">Website thương mại điện tử</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Column 4 -->
-							<div class="col-span-3 space-y-3 md:space-y-4 mt-12">
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-2deg] hover:rotate-0">
-									<img src="https://placehold.co/300x350/f472b6/ffffff?text=Award" alt="Award" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-								</div>
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[3deg] hover:rotate-0">
-									<img src="https://placehold.co/300x300/fb7185/ffffff?text=Team+3" alt="Team 3" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-								</div>
-							</div>
-
-						</div>
-
-						<!-- Decorative Elements -->
-						<div class="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 blur-2xl animate-pulse"></div>
-						<div class="absolute bottom-20 right-20 w-32 h-32 bg-pink-400 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-						
-						<!-- Rocket Icon at bottom -->
-						<div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-							<div class="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full p-4 shadow-2xl">
-								<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-									<path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
-								</svg>
-							</div>
-						</div>
-					</div>
-
-					<!-- Stats Bar -->
-					<div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-						<div class="text-center">
-							<p class="text-4xl font-bold text-white mb-2">12000+</p>
-							<p class="text-purple-200 text-sm">Dự án hoàn thành</p>
-						</div>
-						<div class="text-center">
-							<p class="text-4xl font-bold text-white mb-2">3500+</p>
-							<p class="text-purple-200 text-sm">Khách hàng</p>
-						</div>
-						<div class="text-center">
-							<p class="text-4xl font-bold text-white mb-2">98%</p>
-							<p class="text-purple-200 text-sm">Hài lòng</p>
-						</div>
-						<div class="text-center">
-							<p class="text-4xl font-bold text-white mb-2">24/7</p>
-							<p class="text-purple-200 text-sm">Hỗ trợ</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Software Products Hero Section - NEW -->
-			<section id="software-products" class="relative overflow-hidden py-20 md:py-32">
-				<!-- Animated Background with Blue Gradient -->
-				<div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800">
-					<!-- Animated Waves -->
-					<div class="absolute inset-0">
-						<svg class="absolute bottom-0 left-0 w-full h-auto opacity-30" viewBox="0 0 1440 400" preserveAspectRatio="none">
-							<path class="wave-path" fill="url(#wave-gradient-1)" d="M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z">
-								<animate attributeName="d" dur="8s" repeatCount="indefinite" 
-									values="M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z;
-											M0,200 C320,120 640,280 960,200 C1280,120 1440,200 1440,200 L1440,400 L0,400 Z;
-											M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z"/>
-							</path>
-							<defs>
-								<linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-									<stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.6" />
-									<stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
-								</linearGradient>
-							</defs>
-						</svg>
-						<svg class="absolute bottom-0 left-0 w-full h-auto opacity-20" viewBox="0 0 1440 400" preserveAspectRatio="none" style="transform: translateY(40px);">
-							<path fill="url(#wave-gradient-2)" d="M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z">
-								<animate attributeName="d" dur="10s" repeatCount="indefinite" 
-									values="M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z;
-											M0,250 C360,150 720,300 1080,250 C1320,150 1440,250 1440,250 L1440,400 L0,400 Z;
-											M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z"/>
-							</path>
-							<defs>
-								<linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-									<stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5" />
-									<stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.5" />
-								</linearGradient>
-							</defs>
-						</svg>
-					</div>
-
-					<!-- Floating Stars/Particles -->
-					<div class="stars-container">
-						<div class="star" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
-						<div class="star" style="left: 30%; top: 40%; animation-delay: 1s;"></div>
-						<div class="star" style="left: 50%; top: 15%; animation-delay: 2s;"></div>
-						<div class="star" style="left: 70%; top: 50%; animation-delay: 1.5s;"></div>
-						<div class="star" style="left: 85%; top: 25%; animation-delay: 0.5s;"></div>
-						<div class="star" style="left: 20%; top: 70%; animation-delay: 2.5s;"></div>
-						<div class="star" style="left: 60%; top: 80%; animation-delay: 1.8s;"></div>
-						<div class="star" style="left: 90%; top: 60%; animation-delay: 0.8s;"></div>
-					</div>
-				</div>
-
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-					<!-- Header Text -->
-					<div class="text-center mb-12">
-						<h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-							Giải pháp phần mềm chuyên sâu cho
-							<br>
-							<span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">
-								tập trình phần mềm và ứng dụng
-							</span>
-						</h2>
-						<p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
-							Bán hàng, quản lý, mua hàng,... Phần mềm doanh nghiệp cần,
-							<span class="text-yellow-300 font-bold"> MONA đều có đủ!</span>
-						</p>
-					</div>
-
-					<!-- Main Content: Person + Floating Products -->
-					<div class="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center">
-						
-						<!-- Central Person Image -->
-						<div class="relative z-20">
-							<div class="relative">
-								<img src="https://placehold.co/500x700/1e3a8a/ffffff?text=Happy+Developer" 
-									alt="Developer" 
-									class="w-64 md:w-96 lg:w-[500px] h-auto rounded-3xl object-cover person-float">
-							</div>
-						</div>
-
-						<!-- Floating Product Cards -->
-						<div class="absolute inset-0">
-							<!-- Product 1: MONA HOUSE (Top Left) -->
-							<div class="product-card absolute top-0 left-[5%] md:left-[10%] w-32 md:w-48 animate-float" style="animation-delay: 0s;">
-								<div class="bg-gradient-to-br from-teal-400 to-cyan-500 rounded-2xl shadow-2xl transform rotate-[-8deg] hover:rotate-0 transition-all duration-500 overflow-hidden border-4 border-white/30">
-									<div class="aspect-[3/4] p-4 flex flex-col items-center justify-center text-white">
-										<div class="w-16 h-16 bg-white/20 rounded-2xl mb-3 flex items-center justify-center">
-											<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
-												<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-											</svg>
-										</div>
-										<h3 class="text-lg font-bold text-center mb-1">MONA</h3>
-										<p class="text-sm font-semibold">HOUSE</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Product 2: Chat Icon (Top Center) -->
-							<div class="product-card absolute top-[8%] left-[35%] md:left-[40%] w-16 md:w-20 animate-float" style="animation-delay: 0.5s;">
-								<div class="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl shadow-xl p-3 md:p-4 transform hover:scale-110 transition-all">
-									<svg class="w-full h-full text-white" fill="currentColor" viewBox="0 0 20 20">
-										<path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"></path>
-									</svg>
-								</div>
-							</div>
-
-							<!-- Product 3: MONA EDUTECH (Left Center) -->
-							<div class="product-card absolute top-[30%] left-[2%] md:left-[8%] w-36 md:w-52 animate-float" style="animation-delay: 1s;">
-								<div class="bg-gradient-to-br from-purple-500 via-purple-600 to-indigo-600 rounded-2xl shadow-2xl transform rotate-[5deg] hover:rotate-0 transition-all duration-500 overflow-hidden border-4 border-white/30">
-									<div class="aspect-[3/4] p-4 flex flex-col items-center justify-center text-white">
-										<div class="w-16 h-16 bg-white/20 rounded-2xl mb-3 flex items-center justify-center">
-											<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
-												<path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-											</svg>
-										</div>
-										<h3 class="text-base font-bold text-center mb-1">MONA</h3>
-										<p class="text-xs font-semibold bg-pink-500 px-2 py-1 rounded-full">EDUTECH</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Product 4: Settings Icon (Top Right) -->
-							<div class="product-card absolute top-[5%] right-[8%] md:right-[15%] w-14 md:w-20 animate-float" style="animation-delay: 1.5s;">
-								<div class="bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-xl p-3 md:p-4 transform hover:scale-110 transition-all">
-									<svg class="w-full h-full text-white" fill="currentColor" viewBox="0 0 20 20">
-										<path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
-									</svg>
-								</div>
-							</div>
-
-							<!-- Product 5: QUAN LY THAM MY (Right Center) -->
-							<div class="product-card absolute top-[28%] right-[3%] md:right-[10%] w-36 md:w-52 animate-float" style="animation-delay: 2s;">
-								<div class="bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 rounded-2xl shadow-2xl transform rotate-[-6deg] hover:rotate-0 transition-all duration-500 overflow-hidden border-4 border-white/30">
-									<div class="aspect-[3/4] p-4 flex flex-col items-center justify-center text-white">
-										<div class="w-16 h-16 bg-white/20 rounded-2xl mb-3 flex items-center justify-center">
-											<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
-												<path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-											</svg>
-										</div>
-										<h3 class="text-sm font-bold text-center mb-1">QUẢN LÝ</h3>
-										<p class="text-xs font-semibold">THẨM MỸ</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Product 6: Heart Icon (Top Right Corner) -->
-							<div class="product-card absolute top-[12%] right-[2%] md:right-[5%] w-12 md:w-16 animate-float" style="animation-delay: 2.5s;">
-								<div class="bg-gradient-to-br from-red-400 to-pink-500 rounded-2xl shadow-xl p-2 md:p-3 transform hover:scale-110 transition-all">
-									<svg class="w-full h-full text-white" fill="currentColor" viewBox="0 0 20 20">
-										<path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-									</svg>
-								</div>
-							</div>
-
-							<!-- Product 7: MONA'S ECOMMERCE (Bottom Center) -->
-							<div class="product-card absolute bottom-[5%] left-1/2 transform -translate-x-1/2 w-40 md:w-56 animate-float" style="animation-delay: 0.8s;">
-								<div class="bg-gradient-to-br from-green-400 via-cyan-500 to-blue-500 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500 overflow-hidden border-4 border-white/30">
-									<div class="aspect-[4/3] p-4 flex flex-col items-center justify-center text-white">
-										<div class="w-20 h-20 bg-white/20 rounded-2xl mb-3 flex items-center justify-center">
-											<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
-												<path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-											</svg>
-										</div>
-										<h3 class="text-lg font-bold text-center">MONA'S</h3>
-										<p class="text-sm font-semibold bg-gradient-to-r from-yellow-300 to-orange-400 text-gray-900 px-3 py-1 rounded-full">ECOMMERCE</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Product 8: MONA JEWELRY (Right Side) -->
-							<div class="product-card absolute top-[55%] right-[8%] md:right-[12%] w-28 md:w-40 animate-float" style="animation-delay: 1.2s;">
-								<div class="bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl shadow-2xl transform rotate-[8deg] hover:rotate-0 transition-all duration-500 overflow-hidden border-4 border-white/30">
-									<div class="aspect-square p-3 flex flex-col items-center justify-center text-white">
-										<div class="w-12 h-12 bg-white/20 rounded-xl mb-2 flex items-center justify-center">
-											<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-												<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98			<!-- Photo Collage Section - NEW -->
-			<section id="achievements" class="relative overflow-hidden py-20 md:py-32">
-				<!-- Background Gradient giống Mona -->
-				<div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-700 to-blue-600"></div>
-				
-				<!-- Decorative waves -->
-				<div class="absolute bottom-0 left-0 right-0">
-					<svg viewBox="0 0 1440 320" class="w-full h-auto">
-						<path fill="rgba(79, 70, 229, 0.3)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-					</svg>
-				</div>
-
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-					<!-- Header -->
-					<div class="text-center mb-16">
-						<div class="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-							<p class="text-white text-sm font-semibold tracking-wide uppercase">Hơn 3 năm kinh nghiệm</p>
-						</div>
-						<h2 class="text-5xl md:text-6xl font-extrabold text-white mb-4">
-							<span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">
-								12.000+
-							</span>
-						</h2>
-						<p class="text-2xl md:text-3xl text-purple-100 font-bold mb-2">Dự án đã thực hiện & Vận hành</p>
-						<p class="text-lg text-purple-200/80">Đồng hành cùng hàng nghìn doanh nghiệp trên toàn quốc</p>
-					</div>
-
-					<!-- Photo Collage Grid -->
-					<div class="relative">
-						<!-- Grid container với các ảnh được sắp xếp nghệ thuật -->
-						<div class="grid grid-cols-12 gap-3 md:gap-4">
-							
-							<!-- Column 1 -->
-							<div class="col-span-3 space-y-3 md:space-y-4">
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-2deg] hover:rotate-0">
-									<img src="https://placehold.co/300x400/6366f1/ffffff?text=Team+Meeting" alt="Team 1" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-									<div class="absolute -bottom-2 -right-2 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 shadow-lg">
-										<p class="text-xs font-bold text-purple-900">Đào tạo nội bộ</p>
-									</div>
-								</div>
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[3deg] hover:rotate-0">
-									<img src="https://placehold.co/300x350/8b5cf6/ffffff?text=Workshop" alt="Workshop" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-								</div>
-							</div>
-
-							<!-- Column 2 -->
-							<div class="col-span-3 space-y-3 md:space-y-4 mt-8">
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[2deg] hover:rotate-0">
-									<img src="https://placehold.co/300x300/a78bfa/ffffff?text=Success" alt="Success" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-								</div>
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-3deg] hover:rotate-0">
-									<img src="https://placehold.co/300x400/c4b5fd/ffffff?text=Team+2" alt="Team 2" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-									<div class="absolute -top-2 -left-2 bg-yellow-400 text-purple-900 rounded-full w-12 h-12 flex items-center justify-center shadow-lg font-bold text-xs transform rotate-12">
-										NEW
-									</div>
-								</div>
-							</div>
-
-							<!-- Column 3 - Center Large -->
-							<div class="col-span-3 flex items-center">
-								<div class="photo-card transform hover:scale-105 transition duration-500">
-									<img src="https://placehold.co/400x500/ec4899/ffffff?text=Main+Project" alt="Main" class="w-full h-auto rounded-xl shadow-2xl border-8 border-white/30">
-									<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl"></div>
-									<div class="absolute bottom-4 left-4 right-4 text-white">
-										<p class="text-xl font-bold mb-1">Dự án nổi bật 2024</p>
-										<p class="text-sm opacity-90">Website thương mại điện tử</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Column 4 -->
-							<div class="col-span-3 space-y-3 md:space-y-4 mt-12">
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-2deg] hover:rotate-0">
-									<img src="https://placehold.co/300x350/f472b6/ffffff?text=Award" alt="Award" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-								</div>
-								<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[3deg] hover:rotate-0">
-									<img src="https://placehold.co/300x300/fb7185/ffffff?text=Team+3" alt="Team 3" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
-								</div>
-							</div>
-
-						</div>
-
-						<!-- Decorative Elements -->
-						<div class="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 blur-2xl animate-pulse"></div>
-						<div class="absolute bottom-20 right-20 w-32 h-32 bg-pink-400 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-						
-						<!-- Rocket Icon at bottom -->
-						<div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-							<div class="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full p-4 shadow-2xl">
-								<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-									<path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
-								</svg>
-							</div>
-						</div>
-					</div>
-
-					<!-- Stats Bar -->
-					<div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-						<div class="text-center">
-							<p class="text-4xl font-bold text-white mb-2">12000+</p>
-							<p class="text-purple-200 text-sm">Dự án hoàn thành</p>
-						</div>
-						<div class="text-center">
-							<p class="text-4xl font-bold text-white mb-2">3500+</p>
-							<p class="text-purple-200 text-sm">Khách hàng</p>
-						</div>
-						<div class="text-center">
-							<p class="text-4xl font-bold text-white mb-2">98%</p>
-							<p class="text-purple-200 text-sm">Hài lòng</p>
-						</div>
-						<div class="text-center">
-							<p class="text-4xl font-bold text-white mb-2">24/7</p>
-							<p class="text-purple-200 text-sm">Hỗ trợ</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Contact Section -->
-		
-
-			<!-- Contact Section -->
-			<!-- <section id="contact" class="bg-gray-800 py-16 md:py-24"> -->
-
-			<!-- Register Form Section -->
-			<section id="register" class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16 md:py-24">
-				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="bg-white p-8 md:p-12 rounded-xl shadow-xl">
-						<h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Đăng ký tư vấn miễn phí</h2>
-						<p class="text-lg text-gray-600 text-center mb-10">Để lại thông tin, tôi sẽ liên hệ lại với bạn sớm nhất!</p>
-						
-						<form id="registrationForm" action="https://formspree.io/f/xldojlkn" method="POST" class="space-y-6">
-							<input type="hidden" name="_gotcha"> 
-							<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-								<div>
-									<label for="name" class="block text-sm font-medium text-gray-700">Họ và tên</label>
-									<div class="mt-1">
-										<input type="text" name="Họ tên" id="name" autocomplete="name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
-									</div>
-								</div>
-								<div>
-									<label for="phone" class="block text-sm font-medium text-gray-700">
-										Số điện thoại <span class="text-red-500">(Bắt buộc)</span>
-									</label>
-									<div class="mt-1">
-										<input type="tel" name="Số điện thoại" id="phone" autocomplete="tel" required class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
-									</div>
-								</div>
-							</div>
-
-							<div>
-								<fieldset>
-									<legend class="text-base font-medium text-gray-900">Dịch vụ bạn quan tâm</legend>
-									<div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
-										<div class="flex items-center">
-											<input id="service_web" name="Tư vấn Web" type="checkbox" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
-											<label for="service_web" class="ml-3 block text-sm font-medium text-gray-700">Tư vấn Web</label>
-										</div>
-										<div class="flex items-center">
-											<input id="service_app" name="Tư vấn App" type="checkbox" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
-											<label for="service_app" class="ml-3 block text-sm font-medium text-gray-700">Tư vấn App</label>
-										</div>
-										<div class="flex items-center">
-											<input id="service_hosting" name="Hosting" type="checkbox" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
-											<label for="service_hosting" class="ml-3 block text-sm font-medium text-gray-700">Hosting</label>
-										</div>
-										<div class="flex items-center">
-											<input id="service_domain" name="Tên miền" type="checkbox" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
-											<label for="service_domain" class="ml-3 block text-sm font-medium text-gray-700">Tên miền</label>
-										</div>
-									</div>
-								</fieldset>
-							</div>
-
-							<div>
-								<label for="message" class="block text-sm font-medium text-gray-700">Nội dung thêm</label>
-								<div class="mt-1">
-									<textarea id="message" name="Nội dung thêm" rows="4" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md" placeholder="Bạn có yêu cầu gì thêm..."></textarea>
-								</div>
-							</div>
-							
-							<div id="form-status" class="text-center text-sm"></div>
-
-							<div class="text-right">
-								<button type="submit" id="submitButton" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50">
-									<i data-lucide="send" class="mr-2 -ml-1 h-5 w-5"></i>
-									Gửi đăng ký
-								</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</section>
-
-
-			<!-- Contact Section -->
-			<section id="contact" class="bg-gray-800 py-16 md:py-24">
-				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h2 class="text-3xl font-bold text-white">Bạn có dự án? Hãy liên hệ!</h2>
-					<p class="mt-4 text-lg text-gray-300">Tôi luôn sẵn sàng lắng nghe ý tưởng của bạn và biến nó thành hiện thực. Đừng ngần ngại gửi email hoặc liên hệ qua các kênh dưới đây.</p>
-					<div class="mt-8 space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:gap-4">
-						<a href="mailto:caophi.nasani@gmail.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
-							<i data-lucide="mail" class="mr-2 -ml-1 h-5 w-5"></i>
-							Gửi Email (caophi.nasani@gmail.com)
-						</a>
-						 <a href="tel:0909876817" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-900 bg-white hover:bg-gray-50">
-							<i data-lucide="phone" class="mr-2 -ml-1 h-5 w-5"></i>
-							Gọi Ngay (0909876817)
-						</a>
-					</div>
-					<div class="mt-10 flex justify-center space-x-6">
-						<a href="#" class="text-gray-400 hover:text-white">
-							<span class="sr-only">Facebook</span>
-							<i data-lucide="facebook" class="h-6 w-6"></i>
-						</a>
-						<a href="#" class="text-gray-400 hover:text-white">
-							<span class="sr-only">LinkedIn</span>
-							<i data-lucide="linkedin" class="h-6 w-6"></i>
-						</a>
-						<a href="#" class="text-gray-400 hover:text-white">
-							<span class="sr-only">Github</span>
-							<i data-lucide="github" class="h-6 w-6"></i>
-						</a>
-					</div>
-				</div>
-			</section>
-		</main>
-
-		<!-- Footer -->
-		<footer class="bg-gray-900">
-			<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-				<p class="text-center text-base text-gray-400">&copy; 2025 Fi.tallest. Mọi quyền được bảo lưu.</p>
+			<div class="absolute bottom-0 left-0 right-0">
+				<svg viewBox="0 0 1440 320" class="w-full h-auto">
+					<path fill="rgba(79, 70, 229, 0.3)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+				</svg>
 			</div>
-		</footer>
 
-		<!-- Floating Contact Buttons -->
-		<div class="fixed right-4 top-1/2 -translate-y-1/2 z-[1000] flex flex-col gap-3">
-			<a href="tel:0909876817" 
-			   class="bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-110"
-			   aria-label="Gọi ngay"
-			   title="Gọi ngay (0909876817)">
-				<i data-lucide="phone" class="w-6 h-6"></i>
-			</a>
-			<a href="https://zalo.me/0909876817" 
-			   target="_blank" 
-			   rel="noopener noreferrer"
-			   class="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-110"
-			   aria-label="Nhắn Zalo"
-			   title="Nhắn Zalo (0909876817)">
-				<i data-lucide="message-circle" class="w-6 h-6"></i>
-			</a>
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="text-center mb-16">
+					<div class="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+						<p class="text-white text-sm font-semibold tracking-wide uppercase">Hơn 3 năm kinh nghiệm</p>
+					</div>
+					<h2 class="text-5xl md:text-6xl font-extrabold text-white mb-4">
+						<span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">
+							12.000+
+						</span>
+					</h2>
+					<p class="text-2xl md:text-3xl text-purple-100 font-bold mb-2">Dự án đã thực hiện & Vận hành</p>
+					<p class="text-lg text-purple-200/80">Đồng hành cùng hàng nghìn doanh nghiệp trên toàn quốc</p>
+				</div>
+
+				<div class="relative">
+					<div class="grid grid-cols-12 gap-3 md:gap-4">
+						
+						<div class="col-span-3 space-y-3 md:space-y-4">
+							<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-2deg] hover:rotate-0">
+								<img src="https://placehold.co/300x400/6366f1/ffffff?text=Team+Meeting" alt="Team 1" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
+								<div class="absolute -bottom-2 -right-2 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 shadow-lg">
+									<p class="text-xs font-bold text-purple-900">Đào tạo nội bộ</p>
+								</div>
+							</div>
+							<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[3deg] hover:rotate-0">
+								<img src="https://placehold.co/300x350/8b5cf6/ffffff?text=Workshop" alt="Workshop" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
+							</div>
+						</div>
+
+						<div class="col-span-3 space-y-3 md:space-y-4 mt-8">
+							<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[2deg] hover:rotate-0">
+								<img src="https://placehold.co/300x300/a78bfa/ffffff?text=Success" alt="Success" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
+							</div>
+							<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-3deg] hover:rotate-0">
+								<img src="https://placehold.co/300x400/c4b5fd/ffffff?text=Team+2" alt="Team 2" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
+								<div class="absolute -top-2 -left-2 bg-yellow-400 text-purple-900 rounded-full w-12 h-12 flex items-center justify-center shadow-lg font-bold text-xs transform rotate-12">
+									NEW
+								</div>
+							</div>
+						</div>
+
+						<div class="col-span-3 flex items-center">
+							<div class="photo-card transform hover:scale-105 transition duration-500">
+								<img src="https://placehold.co/400x500/ec4899/ffffff?text=Main+Project" alt="Main" class="w-full h-auto rounded-xl shadow-2xl border-8 border-white/30">
+								<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl"></div>
+								<div class="absolute bottom-4 left-4 right-4 text-white">
+									<p class="text-xl font-bold mb-1">Dự án nổi bật 2024</p>
+									<p class="text-sm opacity-90">Website thương mại điện tử</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-span-3 space-y-3 md:space-y-4 mt-12">
+							<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[-2deg] hover:rotate-0">
+								<img src="https://placehold.co/300x350/f472b6/ffffff?text=Award" alt="Award" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
+							</div>
+							<div class="photo-card transform hover:scale-105 transition duration-500 rotate-[3deg] hover:rotate-0">
+								<img src="https://placehold.co/300x300/fb7185/ffffff?text=Team+3" alt="Team 3" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white/20">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 blur-2xl animate-pulse"></div>
+					<div class="absolute bottom-20 right-20 w-32 h-32 bg-pink-400 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+					
+					<div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+						<div class="bg-gradient-to-br from-blue-400 to-black-500 rounded-full p-4 shadow-2xl">
+							<a href="">
+								<img src="assets/images/logo.png"
+									 alt="Logo F17"
+									 style="height: 100px; object-fit: contain;">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+					<div class="text-center">
+						<p class="text-4xl font-bold text-white mb-2">12000+</p>
+						<p class="text-purple-200 text-sm">Dự án hoàn thành</p>
+					</div>
+					<div class="text-center">
+						<p class="text-4xl font-bold text-white mb-2">3500+</p>
+						<p class="text-purple-200 text-sm">Khách hàng</p>
+					</div>
+					<div class="text-center">
+						<p class="text-4xl font-bold text-white mb-2">98%</p>
+						<p class="text-purple-200 text-sm">Hài lòng</p>
+					</div>
+					<div class="text-center">
+						<p class="text-4xl font-bold text-white mb-2">24/7</p>
+						<p class="text-purple-200 text-sm">Hỗ trợ</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="software-products" class="relative overflow-hidden py-20 md:py-32">
+			<div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800">
+				<div class="absolute inset-0">
+					<svg class="absolute bottom-0 left-0 w-full h-auto opacity-30" viewBox="0 0 1440 400" preserveAspectRatio="none">
+						<path class="wave-path" fill="url(#wave-gradient-1)" d="M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z">
+							<animate attributeName="d" dur="8s" repeatCount="indefinite"
+								values="M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z;
+										M0,200 C320,120 640,280 960,200 C1280,120 1440,200 1440,200 L1440,400 L0,400 Z;
+										M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z"/>
+						</path>
+						<defs>
+							<linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+								<stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.6" />
+								<stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
+							</linearGradient>
+						</defs>
+					</svg>
+					<svg class="absolute bottom-0 left-0 w-full h-auto opacity-20" viewBox="0 0 1440 400" preserveAspectRatio="none" style="transform: translateY(40px);">
+						<path fill="url(#wave-gradient-2)" d="M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z">
+							<animate attributeName="d" dur="10s" repeatCount="indefinite"
+								values="M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z;
+										M0,250 C360,150 720,300 1080,250 C1320,150 1440,250 1440,250 L1440,400 L0,400 Z;
+										M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z"/>
+						</path>
+						<defs>
+							<linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+								<stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5" />
+								<stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.5" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</div>
+
+				<div class="stars-container">
+					<div class="star" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+					<div class="star" style="left: 30%; top: 40%; animation-delay: 1s;"></div>
+					<div class="star" style="left: 50%; top: 15%; animation-delay: 2s;"></div>
+					<div class="star" style="left: 70%; top: 50%; animation-delay: 1.5s;"></div>
+					<div class="star" style="left: 85%; top: 25%; animation-delay: 0.5s;"></div>
+					<div class="star" style="left: 20%; top: 70%; animation-delay: 2.5s;"></div>
+					<div class="star" style="left: 60%; top: 80%; animation-delay: 1.8s;"></div>
+					<div class="star" style="left: 90%; top: 60%; animation-delay: 0.8s;"></div>
+				</div>
+			</div>
+
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+						Giải pháp phần mềm chuyên sâu cho
+						<br>
+						<span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">
+							lập trình phần mềm và ứng dụng
+						</span>
+					</h2>
+					<p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+						Bán hàng, quản lý, mua hàng,... Phần mềm doanh nghiệp cần,
+						<span class="text-yellow-300 font-bold"> MONA đều có đủ!</span>
+					</p>
+				</div>
+
+				<div class="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center">
+					
+					<div class="relative z-20">
+						<div class="relative">
+							<img src="assets/images/person-banner.png"
+								 alt="Fi.tallest - Lập trình phần mềm"
+								 class="w-64 md:w-96 lg:w-[500px] h-auto object-cover person-float"
+								 style="max-width: 500px; filter: drop-shadow(0 20px 25px rgba(0,0,0,0.4));">
+							</div>
+					</div>
+
+					<div class="absolute inset-0">
+						<div class="product-card absolute top-0 left-[5%] md:left-[10%] w-32 md:w-48 animate-float" style="animation-delay: 0s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/img-banner-2.png" alt="Mona House" class="transform rotate-[-8deg] hover:rotate-0 transition-all duration-500">
+						</div>
+
+						<div class="product-card absolute top-[8%] left-[35%] md:left-[40%] w-16 md:w-20 animate-float" style="animation-delay: 0.5s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/ico-banner-3.svg" alt="Icon" class="transform hover:scale-110 transition-all">
+						</div>
+
+						<div class="product-card absolute top-[30%] left-[2%] md:left-[8%] w-36 md:w-52 animate-float" style="animation-delay: 1s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/img-banner-4.png" alt="Mona Edutech" class="transform rotate-[5deg] hover:rotate-0 transition-all duration-500">
+						</div>
+
+						<div class="product-card absolute top-[5%] right-[8%] md:right-[15%] w-14 md:w-20 animate-float" style="animation-delay: 1.5s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/ico-banner-1.svg" alt="Icon" class="transform hover:scale-110 transition-all">
+						</div>
+
+						<div class="product-card absolute top-[28%] right-[3%] md:right-[10%] w-36 md:w-52 animate-float" style="animation-delay: 2s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/img-banner-5.png" alt="Quản lý kinh doanh" class="transform rotate-[-6deg] hover:rotate-0 transition-all duration-500">
+						</div>
+
+						<div class="product-card absolute top-[12%] right-[2%] md:right-[5%] w-12 md:w-16 animate-float" style="animation-delay: 2.5s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/ico-banner-2.svg" alt="Icon" class="transform hover:scale-110 transition-all">
+						</div>
+
+						<div class="product-card absolute bottom-[5%] left-1/2 transform -translate-x-1/2 w-40 md:w-56 animate-float" style="animation-delay: 0.8s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/img-banner-6.png" alt="Mona Ecommerce" class="transform hover:scale-105 transition-all duration-500">
+						</div>
+
+						<div class="product-card absolute top-[55%] right-[8%] md:right-[12%] w-28 md:w-40 animate-float" style="animation-delay: 1.2s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/img-banner-7.png" alt="Mona Jewelry" class="transform rotate-[8deg] hover:rotate-0 transition-all duration-500">
+						</div>
+
+						<div class="product-card absolute bottom-[15%] right-[5%] md:right-[10%] w-16 md:w-20 animate-float" style="animation-delay: 1.8s;">
+							<img src="https://mona.software/wp-content/themes/mona-soft/assets/images/ico-banner-4.svg" alt="Icon" class="transform hover:scale-110 transition-all">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		
+		<section id="register" class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16 md:py-24">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="bg-white p-8 md:p-12 rounded-xl shadow-xl">
+					<h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Đăng ký tư vấn miễn phí</h2>
+					<p class="text-lg text-gray-600 text-center mb-10">Để lại thông tin, tôi sẽ liên hệ lại với bạn sớm nhất!</p>
+					
+					<form id="registrationForm" action="https://formspree.io/f/xldojlkn" method="POST" class="space-y-6">
+						<input type="hidden" name="_gotcha">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<label for="name" class="block text-sm font-medium text-gray-700">Họ và tên</label>
+								<div class="mt-1">
+									<input type="text" name="Họ tên" id="name" autocomplete="name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+								</div>
+							</div>
+							<div>
+								<label for="phone" class="block text-sm font-medium text-gray-700">
+									Số điện thoại <span class="text-red-500">(Bắt buộc)</span>
+								</label>
+								<div class="mt-1">
+									<input type="tel" name="Số điện thoại" id="phone" autocomplete="tel" required class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<fieldset>
+								<legend class="text-base font-medium text-gray-900">Dịch vụ bạn quan tâm</legend>
+								<div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
+									<div class="flex items-center">
+										<input id="service_web" name="Tư vấn Web" type="checkbox" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+										<label for="service_web" class="ml-3 block text-sm font-medium text-gray-700">Tư vấn Web</label>
+									</div>
+									<div class="flex items-center">
+										<input id="service_app" name="Tư vấn App" type="checkbox" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+										<label for="service_app" class="ml-3 block text-sm font-medium text-gray-700">Tư vấn App</label>
+									</div>
+									<div class="flex items-center">
+										<input id="service_hosting" name="Hosting" type="checkbox" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+										<label for="service_hosting" class="ml-3 block text-sm font-medium text-gray-700">Hosting</label>
+									</div>
+									<div class="flex items-center">
+										<input id="service_domain" name="Tên miền" type="checkbox" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+										<label for="service_domain" class="ml-3 block text-sm font-medium text-gray-700">Tên miền</label>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+
+						<div>
+							<label for="message" class="block text-sm font-medium text-gray-700">Nội dung thêm</label>
+							<div class="mt-1">
+								<textarea id="message" name="Nội dung thêm" rows="4" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md" placeholder="Bạn có yêu cầu gì thêm..."></textarea>
+							</div>
+						</div>
+						
+						<div id="form-status" class="text-center text-sm"></div>
+
+						<div class="text-right">
+							<button type="submit" id="submitButton" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50">
+								<i data-lucide="send" class="mr-2 -ml-1 h-5 w-5"></i>
+								Gửi đăng ký
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="contact" class="bg-gray-800 py-16 md:py-24">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl font-bold text-white">Bạn có dự án? Hãy liên hệ!</h2>
+				<p class="mt-4 text-lg text-gray-300">Tôi luôn sẵn sàng lắng nghe ý tưởng của bạn và biến nó thành hiện thực. Đừng ngần ngại gửi email hoặc liên hệ qua các kênh dưới đây.</p>
+				<div class="mt-8 space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:gap-4">
+					<a href="mailto:caophi.nasani@gmail.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+						<i data-lucide="mail" class="mr-2 -ml-1 h-5 w-5"></i>
+						Gửi Email (caophi.nasani@gmail.com)
+					</a>
+					 <a href="tel:0909876817" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-900 bg-white hover:bg-gray-50">
+						<i data-lucide="phone" class="mr-2 -ml-1 h-5 w-5"></i>
+						Gọi Ngay (0909876817)
+					</a>
+				</div>
+				<div class="mt-10 flex justify-center space-x-6">
+					<a href="#" class="text-gray-400 hover:text-white">
+						<span class="sr-only">Facebook</span>
+						<i data-lucide="facebook" class="h-6 w-6"></i>
+					</a>
+					<a href="#" class="text-gray-400 hover:text-white">
+						<span class="sr-only">LinkedIn</span>
+						<i data-lucide="linkedin" class="h-6 w-6"></i>
+					</a>
+					<a href="#" class="text-gray-400 hover:text-white">
+						<span class="sr-only">Github</span>
+						<i data-lucide="github" class="h-6 w-6"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="bg-gray-900">
+		<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+			<p class="text-center text-base text-gray-400">&copy; 2025 Fi.tallest. Mọi quyền được bảo lưu.</p>
 		</div>
+	</footer>
 
-		<!-- Div cho thông báo thành công -->
-		<div id="success-message">
-			Đăng ký thành công! Cảm ơn bạn.
-		</div>
+	<div class="fixed right-4 top-1/2 -translate-y-1/2 z-[1000] flex flex-col gap-3">
+		<a href="tel:0909876817"
+		   class="bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-110"
+		   aria-label="Gọi ngay"
+		   title="Gọi ngay (0909876817)">
+			<i data-lucide="phone" class="w-6 h-6"></i>
+		</a>
+		<a href="https://zalo.me/0909876817"
+		   target="_blank"
+		   rel="noopener noreferrer"
+		   class="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-110"
+		   aria-label="Nhắn Zalo"
+		   title="Nhắn Zalo (0909876817)">
+			<i data-lucide="message-circle" class="w-6 h-6"></i>
+		</a>
+	</div>
+
+	<div id="success-message">
+		Đăng ký thành công! Cảm ơn bạn.
+	</div>
 
 
-		<!-- 
-		  CÁC SCRIPT ĐÃ ĐƯỢC CHUẨN HÓA
-		  Thứ tự tải: Thư viện -> Logic chung -> Logic riêng của trang
-		-->
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
-		<!-- 1. Thư viện (Vẫn dùng CDN, nhưng nên tải về 'assets/js/') -->
-		<script src="https://unpkg.com/lucide@latest"></script>
-		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+	<script src="assets/js/main.js"></script>
 
-		<!-- 2. Logic chung (Menu, Icons) -->
-		<script src="assets/js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			
+			const form = document.getElementById('registrationForm');
+			const formStatus = document.getElementById('form-status');
+			const submitButton = document.getElementById('submitButton');
+			const successMessage = document.getElementById('success-message');
 
-		<!-- 3. Logic riêng của trang (Formspree & Confetti) -->
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				// XÓA: Logic Lucide và Menu (đã chuyển sang main.js)
+			if (form && formStatus && submitButton) {
+				form.addEventListener('submit', function(event) {
+					event.preventDefault();
+					console.log("Form submission prevented.");
 
-				// === GIỮ LẠI: SCRIPT XỬ LÝ FORM SUBMISSION VÀ PHÁO HOA ===
-				const form = document.getElementById('registrationForm');
-				const formStatus = document.getElementById('form-status');
-				const submitButton = document.getElementById('submitButton');
-				const successMessage = document.getElementById('success-message'); 
+					const formData = new FormData(form);
+					submitButton.disabled = true;
+					formStatus.textContent = 'Đang gửi...';
+					formStatus.className = 'text-center text-sm text-gray-500';
 
-				if (form && formStatus && submitButton) {
-					form.addEventListener('submit', function(event) {
-						event.preventDefault(); 
-						console.log("Form submission prevented."); 
-
-						const formData = new FormData(form);
-						submitButton.disabled = true; 
-						formStatus.textContent = 'Đang gửi...';
-						formStatus.className = 'text-center text-sm text-gray-500';
-
-						fetch(form.action, {
-							method: form.method,
-							body: formData,
-							headers: {
-								'Accept': 'application/json' 
+					fetch(form.action, {
+						method: form.method,
+						body: formData,
+						headers: {
+							'Accept': 'application/json'
+						}
+					}).then(response => {
+						console.log("Fetch response received:", response.status);
+						if (response.ok) {
+							console.log("Form submitted successfully via AJAX.");
+							formStatus.textContent = 'Gửi thành công!';
+							formStatus.className = 'text-center text-sm text-green-600';
+							form.reset();
+							
+							if (successMessage) {
+								successMessage.classList.add('show');
+								setTimeout(() => {
+									successMessage.classList.remove('show');
+								}, 3000);
 							}
-						}).then(response => {
-							console.log("Fetch response received:", response.status); 
-							if (response.ok) {
-								console.log("Form submitted successfully via AJAX."); 
-								formStatus.textContent = 'Gửi thành công!';
-								formStatus.className = 'text-center text-sm text-green-600';
-								form.reset(); 
-								
-								if (successMessage) {
-									successMessage.classList.add('show');
-									setTimeout(() => {
-										successMessage.classList.remove('show');
-									}, 3000); 
-								}
 
-								if (typeof confetti === 'function') {
-									console.log("Triggering confetti!"); 
-									confetti({
-										particleCount: 150, 
-										spread: 90,        
-										origin: { y: 0.6 } 
-									});
-								} else {
-									console.log("Confetti function not found."); 
-								}
-								
-							} else {
-								console.log("Form submission failed via AJAX."); 
-								response.json().then(data => {
-									if (data && data.errors) {
-										 formStatus.textContent = data.errors.map(error => error.message || 'Lỗi không xác định').join(", ");
-									} else {
-										formStatus.textContent = 'Oops! Có lỗi xảy ra khi gửi form.';
-									}
-									formStatus.className = 'text-center text-sm text-red-600';
-								}).catch(() => {
-									formStatus.textContent = 'Oops! Có lỗi xảy ra khi xử lý phản hồi.';
-									formStatus.className = 'text-center text-sm text-red-600';
+							if (typeof confetti === 'function') {
+								console.log("Triggering confetti!");
+								confetti({
+									particleCount: 150,
+									spread: 90,
+									origin: { y: 0.6 }
 								});
+							} else {
+								console.log("Confetti function not found.");
 							}
-						}).catch(error => {
-							console.error('Form submission fetch error:', error); 
-							formStatus.textContent = 'Oops! Có lỗi mạng xảy ra khi gửi form.';
-							formStatus.className = 'text-center text-sm text-red-600';
-						}).finally(() => {
-							submitButton.disabled = false; 
-							setTimeout(() => {
-							   if (formStatus) formStatus.textContent = '';
-							}, 5000); 
-						   
-						});
+							
+						} else {
+							console.log("Form submission failed via AJAX.");
+							response.json().then(data => {
+								if (data && data.errors) {
+									 formStatus.textContent = data.errors.map(error => error.message || 'Lỗi không xác định').join(", ");
+								} else {
+									formStatus.textContent = 'Oops! Có lỗi xảy ra khi gửi form.';
+								}
+								formStatus.className = 'text-center text-sm text-red-600';
+							}).catch(() => {
+								formStatus.textContent = 'Oops! Có lỗi xảy ra khi xử lý phản hồi.';
+								formStatus.className = 'text-center text-sm text-red-600';
+							});
+						}
+					}).catch(error => {
+						console.error('Form submission fetch error:', error);
+						formStatus.textContent = 'Oops! Có lỗi mạng xảy ra khi gửi form.';
+						formStatus.className = 'text-center text-sm text-red-600';
+					}).finally(() => {
+						submitButton.disabled = false;
+						setTimeout(() => {
+						   if (formStatus) formStatus.textContent = '';
+						}, 5000);
+					   
 					});
-				} else {
-					console.error("Could not find form elements for AJAX submission."); 
-				}
-				// === HẾT SCRIPT FORM SUBMISSION ===
+				});
+			} else {
+				console.error("Could not find form elements for AJAX submission.");
+			}
+			// === HẾT SCRIPT FORM SUBMISSION ===
 
-			}); // Đóng DOMContentLoaded
-		</script>
-	</body>
-	</html>
+		}); // Đóng DOMContentLoaded
+	</script>
+</body>
+</html>
