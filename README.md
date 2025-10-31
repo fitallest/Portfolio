@@ -99,3 +99,4 @@ MIT License - Tự do sử dụng
 ---
 
 ⭐ **Star repo này nếu bạn thấy hữu ích!**
+<img width="1024" height="1024" alt="image-Photoroom (7)" src="https://github.com/user-attachments/assets/dabbb8a6-cf6b-4e00-b810-408135e6a594" />
