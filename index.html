@@ -329,118 +329,177 @@
 			</div>
 		</section>
 
-		<section id="software-products" class="relative overflow-hidden py-20 md:py-32">
-			<div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800">
-				<div class="absolute inset-0">
-					<svg class="absolute bottom-0 left-0 w-full h-auto opacity-30" viewBox="0 0 1440 400" preserveAspectRatio="none">
-						<path class="wave-path" fill="url(#wave-gradient-1)" d="M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z">
-							<animate attributeName="d" dur="8s" repeatCount="indefinite"
-								values="M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z;
-										M0,200 C320,120 640,280 960,200 C1280,120 1440,200 1440,200 L1440,400 L0,400 Z;
-										M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z"/>
-						</path>
-						<defs>
-							<linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-								<stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.6" />
-								<stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
-							</linearGradient>
-						</defs>
-					</svg>
-					<svg class="absolute bottom-0 left-0 w-full h-auto opacity-20" viewBox="0 0 1440 400" preserveAspectRatio="none" style="transform: translateY(40px);">
-						<path fill="url(#wave-gradient-2)" d="M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z">
-							<animate attributeName="d" dur="10s" repeatCount="indefinite"
-								values="M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z;
-										M0,250 C360,150 720,300 1080,250 C1320,150 1440,250 1440,250 L1440,400 L0,400 Z;
-										M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z"/>
-						</path>
-						<defs>
-							<linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-								<stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5" />
-								<stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.5" />
-							</linearGradient>
-						</defs>
-					</svg>
-				</div>
+		<section id="software-products" class="relative overflow-hidden pt-20 md:pt-32">
+	
+	<!-- LỚP 1 (z-0): Nền Gradient, Sao, Sóng SVG (Full-width) -->
+	<!-- Đây là nền chính, z-0, nằm sau cùng -->
+	<div class="absolute inset-0 z-0">
+		<!-- Nền Gradient -->
+		<div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800"></div>
+		
+		<!-- 2 Sóng SVG động -->
+		<div class="absolute inset-0">
+			<!-- Sóng 1 -->
+			<svg class="absolute bottom-0 left-0 w-full h-auto opacity-30" viewBox="0 0 1440 400" preserveAspectRatio="none">
+				<path class="wave-path" fill="url(#wave-gradient-1)" d="M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z">
+					<animate attributeName="d" dur="8s" repeatCount="indefinite"
+						values="M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z;
+								M0,200 C320,120 640,280 960,200 C1280,120 1440,200 1440,200 L1440,400 L0,400 Z;
+								M0,200 C320,280 640,120 960,200 C1280,280 1440,200 1440,200 L1440,400 L0,400 Z"/>
+				</path>
+				<defs>
+					<linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+						<stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.6" />
+						<stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
+					</linearGradient>
+				</defs>
+			</svg>
+			<!-- Sóng 2 -->
+			<svg class="absolute bottom-0 left-0 w-full h-auto opacity-20" viewBox="0 0 1440 400" preserveAspectRatio="none" style="transform: translateY(40px);">
+				<path fill="url(#wave-gradient-2)" d="M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z">
+					<animate attributeName="d" dur="10s" repeatCount="indefinite"
+						values="M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z;
+								M0,250 C360,150 720,300 1080,250 C1320,150 1440,250 1440,250 L1440,400 L0,400 Z;
+								M0,250 C360,300 720,150 1080,250 C1320,320 1440,250 1440,250 L1440,400 L0,400 Z"/>
+				</path>
+				<defs>
+					<linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+						<stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5" />
+						<stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.5" />
+					</linearGradient>
+				</defs>
+			</svg>
+		</div>
 
-				<div class="stars-container">
-					<div class="star" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
-					<div class="star" style="left: 30%; top: 40%; animation-delay: 1s;"></div>
-					<div class="star" style="left: 50%; top: 15%; animation-delay: 2s;"></div>
-					<div class="star" style="left: 70%; top: 50%; animation-delay: 1.5s;"></div>
-					<div class="star" style="left: 85%; top: 25%; animation-delay: 0.5s;"></div>
-					<div class="star" style="left: 20%; top: 70%; animation-delay: 2.5s;"></div>
-					<div class="star" style="left: 60%; top: 80%; animation-delay: 1.8s;"></div>
-					<div class="star" style="left: 90%; top: 60%; animation-delay: 0.8s;"></div>
-				</div>
+		<!-- Sao lấp lánh -->
+		<div class="stars-container">
+			<div class="star" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+			<div class="star" style="left: 30%; top: 40%; animation-delay: 1s;"></div>
+			<div class="star" style="left: 50%; top: 15%; animation-delay: 2s;"></div>
+			<div class="star" style="left: 70%; top: 50%; animation-delay: 1.5s;"></div>
+			<div class="star" style="left: 85%; top: 25%; animation-delay: 0.5s;"></div>
+			<div class="star" style="left: 20%; top: 70%; animation-delay: 2.5s;"></div>
+			<div class="star" style="left: 60%; top: 80%; animation-delay: 1.8s;"></div>
+			<div class="star" style="left: 90%; top: 30%; animation-delay: 0.8s;"></div>
+			<!-- ... Thêm các sao khác nếu cần ... -->
+		</div>
+	</div>
+
+	<!-- LỚP 2 (z-20): VĂN BẢN (Bị giới hạn chiều ngang) -->
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+		<!-- === ĐÃ KHÔI PHỤC NỘI DUNG VĂN BẢN === -->
+		<div class="text-center mb-12">
+			<h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+				Giải pháp phần mềm chuyên sâu cho
+				<br>
+				<span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">
+					Mọi lĩnh vực, mọi ý tưởng
+				</span>
+			</h2>
+			<p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+				Bán hàng, quản lý, giới thiệu,...doanh nghiệp cần,
+				<span class="text-yellow-300 font-bold"> FI.TALLEST đều có đủ!</span>
+			</p>
+		</div>
+	</div>
+
+
+	<div class="relative min-h-[700px] w-full z-10">
+
+		<img src="assets/images/hst-bg.png" alt="Hệ sinh thái nền" class="absolute bottom-0 left-0 w-full h-auto z-10">
+
+
+		<!-- LỚP 3b (z-30): HÌNH ẢNH TRUNG TÂM -->
+		<!-- Nằm `absolute` bên trong LỚP 3, z-30 (trên hst-bg và sản phẩm) -->
+		<div class="absolute bottom-0 inset-x-0 z-10 flex justify-center">
+			<img src="assets/images/fi.png"
+				alt="Hình ảnh trung tâm"
+				class="w-full max-w-4xl h-auto object-contain"
+				style="filter: drop-shadow(0 20px 25px rgba(0,0,0,0.4));">
+		</div>
+
+		<!-- LỚP 3c (z-20): CÁC SẢN PHẨM -->
+		
+		<div class="absolute inset-0 z-20">
+
+			<!-- 1. Fi.tallest HOUSE (Top Left) -->
+			<div class="product-card absolute top-[8%] left-[25%] w-80 md:w-92 animate-float" style="animation-delay: 0s;">
+				<img src="assets/images/wow/fb.png"" alt="Fi.tallest House" class="transform rotate-[-15deg] hover:rotate-0 transition-all duration-500">
+			</div>
+			
+			<!-- 2. Fi.tallest EDUTECH (Mid Left) -->
+			<div class="product-card absolute top-[38%] left-[30%] w-84 md:w-96 animate-float" style="animation-delay: 1s;">
+				<img src="assets/images/wow/edu.png"" alt="Fi.tallest Edutech" class="transform rotate-[15deg] hover:rotate-0 transition-all duration-500">
 			</div>
 
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-				<div class="text-center mb-12">
-					<h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-						Giải pháp phần mềm chuyên sâu cho
-						<br>
-						<span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">
-							Mọi lĩnh vực, mọi ý tưởng
-						</span>
-					</h2>
-					<p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
-						Bán hàng, quản lý, giới thiệu,...doanh nghiệp cần,
-						<span class="text-yellow-300 font-bold"> FI.TALLEST đều có đủ!</span>
-					</p>
-				</div>
-
-				<div class="relative min-h-[600px] md:min-h-[700px] flex items-end justify-center overflow-hidden">
-
-    <div class="relative z-10">
-        <div class="relative">
-            <img src="assets/images/wow/fi.png"
-                 alt="THE MONA - Lập trình phần mềm"
-                 class="w-full h-auto object-cover person-float"
-                 style="max-width: 1000px; filter: drop-shadow(0 20px 25px rgba(0,0,0,0.4));">
-        </div>
-    </div>
-
-    <div class="absolute inset-0 z-20">
-        <div class="product-card absolute top-0 left-[5%] md:left-[10%] w-40 md:w-64 animate-float" style="animation-delay: 0s;">
-            <img src="assets/images/wow/fb.png" alt="Mona House" class="transform rotate-[-8deg] hover:rotate-0 transition-all duration-500">
-        </div>
-
-        <div class="product-card absolute top-[8%] left-[35%] md:left-[40%] w-20 md:w-28 animate-float" style="animation-delay: 0.5s;">
-            <img src="https://mona.software/wp-content/themes/mona-soft/assets/images/ico-banner-3.svg" alt="Icon" class="transform hover:scale-110 transition-all">
-        </div>
-
-        <div class="product-card absolute top-[30%] left-[2%] md:left-[8%] w-48 md:w-72 animate-float" style="animation-delay: 1s;">
-            <img src="assets/images/wow/edu.png" alt="Mona Edutech" class="transform rotate-[5deg] hover:rotate-0 transition-all duration-500">
-        </div>
-
-        <div class="product-card absolute top-[5%] right-[8%] md:right-[15%] w-20 md:w-28 animate-float" style="animation-delay: 1.5s;">
-            <img src="assets/images/wow/fb.png" alt="Icon" class="transform hover:scale-110 transition-all">
-        </div>
-
-        <div class="product-card absolute top-[28%] right-[3%] md:right-[10%] w-48 md:w-72 animate-float" style="animation-delay: 2s;">
-            <img src="assets/images/wow/ql.png" alt="Quản lý kinh doanh" class="transform rotate-[-6deg] hover:rotate-0 transition-all duration-500">
-        </div>
-
-        <div class="product-card absolute top-[12%] right-[2%] md:right-[5%] w-16 md:w-24 animate-float" style="animation-delay: 2.5s;">
-            <img src="https://mona.software/wp-content/themes/mona-soft/assets/images/ico-banner-2.svg" alt="Icon" class="transform hover:scale-110 transition-all">
-        </div>
-
-        <div class="product-card absolute bottom-[5%] left-1/2 transform -translate-x-1/2 w-52 md:w-80 animate-float" style="animation-delay: 0.8s;">
-            <img src="assets/images/wow/ecom.png" alt="Mona Ecommerce" class="transform hover:scale-105 transition-all duration-500">
-        </div>
-
-        <div class="product-card absolute top-[55%] right-[8%] md:right-[12%] w-36 md:w-52 animate-float" style="animation-delay: 1.2s;">
-            <img src="assets/images/wow/kc.png" alt="Mona Jewelry" class="transform rotate-[8deg] hover:rotate-0 transition-all duration-500">
-        </div>
-
-        <div class="product-card absolute bottom-[15%] right-[5%] md:right-[10%] w-20 md:w-28 animate-float" style="animation-delay: 1.8s;">
-            <img src="https://mona.software/wp-content/themes/mona-soft/assets/images/ico-banner-4.svg" alt="Icon" class="transform hover:scale-110 transition-all">
-        </div>
-    </div>
-
-</div>
+			<!-- 3. Fi.tallest JEWELRY (Top Right) -->
+			<div class="product-card absolute top-[18%] right-[35%] w-26 md:w-48 animate-float" style="animation-delay: 1.5s;">
+				<img src="assets/images/wow/kc.png" alt="Fi.tallest Jewelry" class="transform rotate-[15deg] hover:rotate-0 transition-all duration-500">
 			</div>
-		</section>
+
+			<!-- 4. QUẢN LÝ TOÀN HỒ SƠ (Mid Right) -->
+			<div class="product-card absolute top-[32%] right-[30%] w-44 md:w-56 animate-float" style="animation-delay: 2s;">
+				<img src="assets/images/wow/ql.png" alt="Quản lý" class="transform rotate-[-15deg] hover:rotate-0 transition-all duration-500">
+			</div>
+
+			<!-- 5. Fi.tallest'S ECOMMERCE (Bottom Center) -->
+			<div class="product-card absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-48 md:w-64 animate-float" style="animation-delay: 0.8s;">
+				<img src="assets/images/wow/ecom.png" alt="Fi.tallest Ecommerce" class="transform hover:scale-105 transition-all duration-500">
+			</div>
+
+			<!-- === 5 ICON NHỎ (Khớp 100% ảnh) === -->
+			<div class="product-card absolute top-[20%] left-[38%] w-12 md:w-16 animate-float" style="animation-delay: 0.5s;">
+				<img src="https://placehold.co/100x100/1f2937/10b981?text=Icon1" alt="Icon" class="transform hover:scale-110 transition-all rounded-full">
+			</div>
+			<div class="product-card absolute top-[45%] left-[8%] w-12 md:w-16 animate-float" style="animation-delay: 1.2s;">
+				<img src="https://placehold.co/100x100/1f2937/ec4899?text=Icon2" alt="Icon" class="transform hover:scale-110 transition-all rounded-lg">
+			</div>
+			<div class="product-card absolute top-[25%] right-[34%] w-12 md:w-16 animate-float" style="animation-delay: 1.8s;">
+				<img src="https://placehold.co/100x100/1f2937/f97316?text=Icon3" alt="Icon" class="transform hover:scale-110 transition-all rounded-lg">
+			</div>
+			<div class="product-card absolute top-[32%] right-[5%] w-10 md:w-14 animate-float" style="animation-delay: 2.2s;">
+				<img src="https://placehold.co/100x100/1f2937/ec4899?text=Icon4" alt="Icon" class="transform hover:scale-110 transition-all rounded-lg">
+			</div>
+			<div class="product-card absolute top-[55%] right-[12%] w-12 md:w-16 animate-float" style="animation-delay: 2.5s;">
+				<img src="https://placehold.co/100x100/1f2937/22c55e?text=Icon5" alt="Icon" class="transform hover:scale-110 transition-all rounded-lg">
+			</div>
+
+			<!-- === 4 THẺ SVG CŨ THÊM LẠI (Từ code gốc của bạn) === -->
+			<div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce">
+				<div class="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full p-4 shadow-2xl">
+					<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+						<path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="product-card absolute top-[85%] right-[68%] md:right-[65%] w-14 md:w-20 animate-float" style="animation-delay: 1.5s;">
+				<div class="bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-xl p-3 md:p-4 transform hover:scale-110 transition-all">
+					<svg class="w-full h-full text-white" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="product-card absolute top-[8%] left-[35%] md:left-[40%] w-16 md:w-20 animate-float" style="animation-delay: 0.5s;">
+				<div class="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl shadow-xl p-3 md:p-4 transform hover:scale-110 transition-all">
+					<svg class="w-full h-full text-white" fill="currentColor" viewBox="0 0 20 20">
+						<path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="product-card absolute top-[40%] right-[2%] md:right-[29%] w-12 md:w-16 animate-float" style="animation-delay: 2.5s;">
+				<div class="bg-gradient-to-br from-red-400 to-pink-500 rounded-2xl shadow-xl p-2 md:p-3 transform hover:scale-110 transition-all">
+					<svg class="w-full h-full text-white" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<!-- Hết LỚP 3c (Sản phẩm) -->
+
+	</div>
+	<!-- Hết LỚP 3 (Hình ảnh) -->
+
+</section>
 		
 		<section id="register" class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16 md:py-24">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -508,11 +567,11 @@
 						</div>
 					</form>
 				</div>
-			</div>
+			</div> 	
 		</section>
 
 
-		<section id="contact" class="bg-gray-800 py-16 md:py-24">
+		<section id="contact" class="bg-gray-800 py-10 md:py-24">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 				<h2 class="text-3xl font-bold text-white">Bạn có dự án? Hãy liên hệ!</h2>
 				<p class="mt-4 text-lg text-gray-300">Tôi luôn sẵn sàng lắng nghe ý tưởng của bạn và biến nó thành hiện thực. Đừng ngần ngại gửi email hoặc liên hệ qua các kênh dưới đây.</p>
@@ -545,7 +604,7 @@
 	</main>
 
 	<footer class="bg-gray-900">
-		<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8">
 			<p class="text-center text-base text-gray-400">&copy; 2025 Fi.tallest. Mọi quyền được bảo lưu.</p>
 		</div>
 	</footer>
@@ -554,7 +613,7 @@
 		<a href="tel:0909876817"
 		   class="bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-110"
 		   aria-label="Gọi ngay"
-		   title="Gọi ngay (0909876817)">
+		   title="Gọi ngay (0909876817)">	
 			<i data-lucide="phone" class="w-6 h-6"></i>
 		</a>
 		<a href="https://zalo.me/0909876817"
@@ -661,4 +720,4 @@
 		}); // Đóng DOMContentLoaded
 	</script>
 </body>
-</html>
+</html>	
