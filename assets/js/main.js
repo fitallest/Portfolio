@@ -65,6 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Script cho carousel dự án trên trang chủ
 // Thêm vào cuối file main.js hoặc tạo file riêng projects-carousel.js
 
+// Script cho carousel dự án trên trang chủ
+// Thêm vào cuối file main.js hoặc tạo file riêng projects-carousel.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const projectsContainer = document.getElementById('projects-carousel-container');
     
@@ -74,8 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
     let autoSlideInterval;
-    const ITEMS_PER_VIEW = 6; // 3 cột x 2 hàng
-    const ITEMS_PER_SLIDE = 2; // Mỗi lần trượt 2 dự án (1 cột)
+    
+    // === ĐIỀU CHỈNH LOGIC CAROUSEL CHO MOBILE ===
+    const isMobile = window.matchMedia("(max-width: 768px)").matches; 
+    
+    // Trên Desktop: 3 cột x 2 hàng = 6 dự án.
+    // Trên Mobile (1 cột): Chỉ hiển thị 1 dự án để card lớn.
+    const ITEMS_PER_VIEW = isMobile ? 1 : 6; 
+    const ITEMS_PER_SLIDE = isMobile ? 1 : 2; 
+    // ===========================================
+    
     const AUTO_SLIDE_DELAY = 2000; // 2 giây
     let projectCards = []; // Cache các card đã tạo
 
@@ -119,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         grid.innerHTML = '';
         
-        // Lấy 6 dự án hiện tại
+        // Lấy số dự án cần hiển thị
         for (let i = 0; i < ITEMS_PER_VIEW; i++) {
             const projectIndex = (currentIndex + i) % projectsData.length;
             const project = projectsData[projectIndex];
