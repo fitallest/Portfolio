@@ -60,5 +60,149 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
+	
 }); // Hết DOMContentLoaded
+// Script cho carousel dự án trên trang chủ
+// Thêm vào cuối file main.js hoặc tạo file riêng projects-carousel.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const projectsContainer = document.getElementById('projects-carousel-container');
+    
+    if (!projectsContainer || typeof projectsData === 'undefined' || !Array.isArray(projectsData)) {
+        return;
+    }
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+    const ITEMS_PER_VIEW = 6; // 3 cột x 2 hàng
+    const ITEMS_PER_SLIDE = 2; // Mỗi lần trượt 2 dự án (1 cột)
+    const AUTO_SLIDE_DELAY = 2000; // 2 giây
+    let projectCards = []; // Cache các card đã tạo
+
+    // Hàm escape HTML
+    const escapeHtml = (unsafe) => {
+        if (!unsafe) return '';
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    };
+
+    // Hàm tạo HTML card dự án
+    const createProjectCard = (project) => {
+        return `
+            <div class="project-card opacity-0">
+                <div class="group rounded-lg shadow-lg overflow-hidden h-full">
+                    <a href="${escapeHtml(project.link) || '#'}" class="block">
+                        <img src="${escapeHtml(project.imageUrl) || 'https://placehold.co/600x400/e0e7ff/4f46e5?text=No+Image'}" 
+                             alt="${escapeHtml(project.title)}" 
+                             class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Error';"
+                             loading="lazy">
+                    </a>
+                    <div class="p-6">
+                        <span class="text-sm text-indigo-600 font-medium">${escapeHtml(project.category)}</span>
+                        <h3 class="mt-1 text-xl font-bold text-gray-900">${escapeHtml(project.title)}</h3>
+                        <p class="mt-2 text-base text-gray-600 line-clamp-3">${escapeHtml(project.description)}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    };
+
+    // Hàm render dự án
+    const renderProjects = () => {
+        const grid = projectsContainer.querySelector('.projects-grid');
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        
+        // Lấy 6 dự án hiện tại
+        for (let i = 0; i < ITEMS_PER_VIEW; i++) {
+            const projectIndex = (currentIndex + i) % projectsData.length;
+            const project = projectsData[projectIndex];
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = createProjectCard(project);
+            const card = tempDiv.firstElementChild;
+            
+            grid.appendChild(card);
+            
+            // Trigger fade in với delay
+            setTimeout(() => {
+                card.classList.remove('opacity-0');
+                card.classList.add('opacity-100');
+            }, i * 50);
+        }
+    };
+
+    // Hàm chuyển slide
+    const slideProjects = (direction = 'next') => {
+        const grid = projectsContainer.querySelector('.projects-grid');
+        if (!grid) return;
+
+        // Thêm class animation
+        grid.classList.add(direction === 'next' ? 'slide-left' : 'slide-right');
+
+        setTimeout(() => {
+            if (direction === 'next') {
+                currentIndex = (currentIndex + ITEMS_PER_SLIDE) % projectsData.length;
+            } else {
+                currentIndex = (currentIndex - ITEMS_PER_SLIDE + projectsData.length) % projectsData.length;
+            }
+            
+            grid.classList.remove('slide-left', 'slide-right');
+            renderProjects();
+        }, 500);
+    };
+
+    // Hàm bắt đầu auto slide
+    const startAutoSlide = () => {
+        stopAutoSlide();
+        autoSlideInterval = setInterval(() => {
+            slideProjects('next');
+        }, AUTO_SLIDE_DELAY);
+    };
+
+    // Hàm dừng auto slide
+    const stopAutoSlide = () => {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+    };
+
+    // Xử lý nút prev
+    const prevBtn = projectsContainer.querySelector('.carousel-btn-prev');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            slideProjects('prev');
+            startAutoSlide();
+        });
+    }
+
+    // Xử lý nút next
+    const nextBtn = projectsContainer.querySelector('.carousel-btn-next');
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            slideProjects('next');
+            startAutoSlide();
+        });
+    }
+
+    // Dừng auto slide khi hover
+    projectsContainer.addEventListener('mouseenter', stopAutoSlide);
+    projectsContainer.addEventListener('mouseleave', startAutoSlide);
+
+    // Khởi tạo
+    renderProjects();
+    startAutoSlide();
+
+    // Kích hoạt Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+});
