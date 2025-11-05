@@ -7,98 +7,98 @@
 const projectsData = [
   {
     "id": 1,
-    "title": "Website Phòng khám Đa khoa Sài Gòn",
-    "category": "Y tế",
-    "description": "Website giới thiệu 15+ chuyên khoa, đặt lịch khám online, tra cứu bác sĩ. Tích hợp thanh toán VNPAY, tối ưu SEO Local.",
-    "imageUrl": "https://placehold.co/600x400/e0e7ff/4f46e5?text=Phong+Kham",
-    "link": "#"
+    "title": "Website Kiến Trúc Phong Thủy",
+    "category": "Xây dựng",
+    "description": "Portfolio 50+ dự án hoàn thành, công cụ thước lỗ ban, blog chia sẻ xu hướng kiến trúc và kiến thức phong thủy.",
+    "imageUrl": "assets/images/da/ptkn.webp",
+    "link": "https://kientrucphongthuykynam.vn"
   },
   {
     "id": 2,
-    "title": "App Y tế HealthTrack",
-    "category": "Ứng dụng Sức khỏe",
-    "description": "Ứng dụng theo dõi sức khỏe cá nhân: đo chỉ số BMI, lịch sử khám bệnh, nhắc uống thuốc. Hỗ trợ iOS & Android.",
-    "imageUrl": "https://placehold.co/600x400/c7d2fe/4338ca?text=Health+App",
-    "link": "#"
+    "title": "Website Tập Đoàn Máy Làm Đá Viên Việt An",
+    "category": "Thương mại điện tử",
+    "description": "Website thương mại điện tử với 4 ngôn ngữ siêu chuẩn, Tích hợp thanh toán VNPAY, tối ưu SEO Local, tích hợp Google Analytics, Tích hợp ERP quản lý đơn hàng và thi công. ",
+    "imageUrl": "assets/images/da/va.png",
+    "link": "https://maylamdavien.vn"
   },
   {
     "id": 3,
-    "title": "Website Công ty Xây dựng Phương Nam",
+    "title": "Website Công Ty Xây Dựng Happy House",
     "category": "Xây dựng",
-    "description": "Portfolio 50+ dự án hoàn thành, công cụ ước tính chi phí thi công, blog chia sẻ xu hướng kiến trúc. Tích hợp CRM Zoho.",
-    "imageUrl": "https://placehold.co/600x400/a5b4fc/3730a3?text=Xay+Dung",
-    "link": "#"
+    "description": "Portfolio 50+ dự án hoàn thành, công cụ ước tính chi phí thi công, blog chia sẻ xu hướng kiến trúc.",
+    "imageUrl": "assets/images/da/hph.webp",
+    "link": "https://xaydunghappyhouse.vn"
   },
   {
     "id": 4,
-    "title": "Landing Page Tech Summit 2024",
-    "category": "Landing Page Sự kiện",
-    "description": "Trang đăng ký sự kiện công nghệ với 2000+ attendees. Form đăng ký tối ưu chuyển đổi 35%, countdown timer, tích hợp Google Analytics.",
-    "imageUrl": "https://placehold.co/600x400/818cf8/ede9fe?text=Landing+Page",
-    "link": "#"
+    "title": "Website BS. Tuấn - Giám Đốc BV Phương Nam",
+    "category": "Y tế",
+    "description": "Website giới thiệu chuyên khoa, đặt lịch khám online, tra cứu bác sĩ. Tích hợp thanh toán VNPAY, tối ưu SEO Local, tích hợp Google Analytics.",
+    "imageUrl": "assets/images/da/bst.png",
+    "link": "http://bsnguyenhoangtuan.com/"
   },
   {
     "id": 5,
-    "title": "Blog Marketing Hub",
-    "category": "Website Tin tức/Blog",
-    "description": "Nền tảng blog 200+ bài viết về Digital Marketing. Tối ưu SEO đạt top 3 Google với 15 từ khóa chính, tốc độ tải 95/100 PageSpeed.",
-    "imageUrl": "https://placehold.co/600x400/6366f1/eef2ff?text=Blog",
-    "link": "#"
+    "title": "Website BS. Hiêu - Trưởng Khoa Cơ Xương Khớp BV Quân Y 7A",
+    "category": "Y tế",
+    "description": "Website giới thiệu chuyên khoa, đặt lịch khám online, theo dõi tiến độ. Tối ưu SEO Local, tích hợp Google Analytics. Tối ưu SEO đạt top 3 Google với 15 từ khóa chính, tốc độ tải 95/100 PageSpeed.",
+    "imageUrl": "assets/images/da/bsh.webp",
+    "link": "https://bsnguyenngochieu.com/"
   },
   {
     "id": 6,
-    "title": "App Đặt lịch Spa Beauty House",
-    "category": "Ứng dụng Đặt lịch",
-    "description": "Ứng dụng đặt lịch hẹn cho chuỗi 8 spa. Quản lý lịch nhân viên, điểm tích lũy, push notification nhắc lịch. Giảm no-show 40%.",
-    "imageUrl": "https://placehold.co/600x400/4f46e5/ddd6fe?text=Spa+App",
-    "link": "#"
+    "title": "Website Công Ty Cổ Phần Trường Thịnh",
+    "category": "Xây dựng",
+    "description": "Giới thiệu thương hiệu Haky, Alpes, Maslai, tích hợp sơn thử bằng trí tuệ nhân tạo, bảng màu, công cụ ước tính lượng sơn cần dùng.",
+    "imageUrl": "assets/images/da/sonth.png",
+    "link": "https://sontotvn.com"
   },
   {
     "id": 7,
-    "title": "Website Bất động sản HomeLand",
-    "category": "Bất động sản",
-    "description": "Nền tảng tìm kiếm 5000+ bất động sản. Bộ lọc thông minh, bản đồ tương tác, chatbot AI tư vấn 24/7. Tích hợp CRM Salesforce.",
-    "imageUrl": "https://placehold.co/600x400/312e81/c7d2fe?text=Bat+Dong+San",
-    "link": "#"
+    "title": "Website Nguyên Liệu Pha Chế Thành Huy",
+    "category": "Thương mại điện tử",
+    "description": "Kênh thương mại chính chủ không mất phí qua trung gian như Shopee, Lazada, Amazon. Đảm bảo lợi nhuận và thương hiệu Thành Huy",
+    "imageUrl": "assets/images/da/nlth.png",
+    "link": "https://nguyenlieuthanhhuy.com"
   },
   {
     "id": 8,
-    "title": "Portfolio Nhiếp ảnh Minh Anh",
-    "category": "Portfolio Cá nhân",
-    "description": "Trang portfolio cá nhân với gallery 300+ ảnh chất lượng cao, hiệu ứng parallax, tối ưu lazy loading. Tốc độ tải < 2 giây.",
-    "imageUrl": "https://placehold.co/600x400/4338ca/d1d5db?text=Portfolio",
-    "link": "#"
+    "title": "Website Công Ty Cổ Phần Thiết Bị Xây Dựng HD",
+    "category": "Thiết bị & Máy móc",
+    "description": "Trang website giới thiệu sản phẩm, tối ưu lazy loading. Tốc độ tải < 2 giây.",
+    "imageUrl": "assets/images/da/tbhd.png",
+    "link": "https://thietbixaydunghd.com/"
   },
   {
     "id": 9,
-    "title": "Website E-learning TechAcademy",
-    "category": "Website Giáo dục",
-    "description": "Nền tảng học trực tuyến 50+ khóa học lập trình. Video streaming, bài kiểm tra tự động, cấp chứng chỉ. 3000+ học viên đăng ký.",
-    "imageUrl": "https://placehold.co/600x400/a78bfa/f3e8ff?text=E-learning",
-    "link": "#"
+    "title": "Website Công Ty Giấy Cúng An Thành Phát",
+    "category": "Thương mại điện tử",
+    "description": "Trang website giới thiệu sản phẩm, Sở hữu nhiều từ khóa top từ khu vực cho đến toàn quốc, tìm là ra, tối ưu lazy loading. ",
+    "imageUrl": "assets/images/da/atp.webp",
+    "link": "http://congtygiaycunganthanhphat.com/"
   },
   {
     "id": 10,
-    "title": "Website E-commerce TechStore",
-    "category": "Website Thương mại điện tử",
-    "description": "Website bán lẻ thiết bị công nghệ: giỏ hàng, thanh toán đa kênh (VNPAY/Momo), quản lý tồn kho, tích hợp vận chuyển GHN/GHTK.",
-    "imageUrl": "https://placehold.co/600x400/e0e7ff/4f46e5?text=E-commerce",
-    "link": "#"
+    "title": "Website Công Ty Cơ Khí Chính Xác DHT",
+    "category": "Cơ Khí",
+    "description": "Website giới thiệu Hồ sơ năng lực, tìm kiếm nhà đầu tư, đối tác sản xuất trong lĩnh vực CNC.",
+    "imageUrl": "assets/images/da/dht.png",
+    "link": "https://dhtgroup739.com.vn"
   },
   {
     "id": 11,
-    "title": "Website Nội thất Hoàng Gia",
+    "title": "Website Nội Thất Cũ Xưa Tịnh Quang",
     "category": "Nội thất",
     "description": "Showroom ảo 360°, công cụ thiết kế phòng 3D, tư vấn phong thủy. Tích hợp ERP quản lý đơn hàng và thi công.",
-    "imageUrl": "https://placehold.co/600x400/c7d2fe/4338ca?text=Noi+That",
-    "link": "#"
+    "imageUrl": "assets/images/da/chu-tinh.webp",
+    "link": "https://thumuadocuxua.com/"
   },
   {
     "id": 12,
-    "title": "Website Thực phẩm Organic Farm",
-    "category": "Thực phẩm",
-    "description": "Website giới thiệu và bán thực phẩm organic. Blog chia sẻ công thức nấu ăn, đặt hàng theo mùa, giao hàng định kỳ.",
-    "imageUrl": "https://placehold.co/600x400/a5b4fc/3730a3?text=Organic",
-    "link": "#"
+    "title": "Website Đại Long Bình Phước",
+    "category": "Giới thiệu việc làm",
+    "description": "Website giới thiệu việc làm và cho thuê xe nâng của anh Long - Công an tỉnh Bình Phước cũ.",
+    "imageUrl": "assets/images/da/dlbp.webp",
+    "link": "http://dailongbinhphuoc.com/"
   }
 ];
