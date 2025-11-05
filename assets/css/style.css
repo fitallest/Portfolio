@@ -106,6 +106,69 @@ body {
     #achievements .grid {
         gap: 0.5rem;
     }
+	/* === CẢI THIỆN BỐ CỤC KHU VỰC "HOẠT ĐỘNG" (#achievements) === */
+
+/* 1. Điều chỉnh tiêu đề và văn bản */
+#achievements .text-center {
+    text-align: center !important; 
+}
+
+/* Điều chỉnh kích thước font cho tiêu đề chính */
+#achievements h2.text-5xl, 
+#achievements h2.text-6xl {
+    font-size: 2.5rem !important; /* Ví dụ: Giảm từ 5xl/6xl xuống 2.5rem */
+    line-height: 1.2 !important;
+}
+
+/* Giảm kích thước font cho văn bản nhỏ */
+#achievements p.text-2xl,
+#achievements p.text-3xl {
+    font-size: 1.25rem !important;
+}
+
+/* 2. Điều chỉnh bố cục ảnh (Chuyển từ 4 cột sang 1 cột) */
+
+/* Ghi đè bố cục grid 12 cột thành 1 cột */
+#achievements .grid-cols-12 {
+    grid-template-columns: 1fr !important; /* 1 cột duy nhất */
+    gap: 1.5rem !important; /* Tăng khoảng cách giữa các mục */
+}
+
+/* Đảm bảo mỗi cột ảnh chiếm toàn bộ chiều ngang */
+#achievements .col-span-3,
+#achievements .col-span-3.mt-8,
+#achievements .col-span-3.flex,
+#achievements .col-span-3.mt-12 {
+    /* Đặt lại thuộc tính liên quan đến cột */
+    width: 100% !important;
+    margin-top: 0 !important; /* Xóa margin-top không cần thiết */
+    display: block !important; 
+}
+
+/* 3. Loại bỏ hiệu ứng xoay và phóng to trên mobile */
+.photo-card,
+.photo-card.transform.rotate-\[-2deg\],
+.photo-card.transform.rotate\[3deg\],
+.photo-card.transform.rotate\[2deg\] {
+    transform: rotate(0deg) !important; /* Loại bỏ tất cả các hiệu ứng xoay */
+    transition: none !important; /* Loại bỏ hiệu ứng chuyển đổi */
+}
+
+.photo-card:hover {
+    transform: none !important; /* Ngăn hover phóng to */
+    filter: none !important;
+    z-index: 1; /* Đặt z-index bình thường */
+}
+
+/* Điều chỉnh vị trí các văn bản chú thích trên ảnh */
+.photo-card .absolute {
+    position: relative !important; /* Chuyển từ absolute sang relative nếu cần */
+    bottom: auto;
+    right: auto;
+    top: auto;
+    left: auto;
+    margin: 5px 0;
+}
 }
 /* ảnh tiêu chí*/
 /* === SOFTWARE PRODUCTS SECTION STYLES === */
@@ -251,12 +314,13 @@ body {
 }
 
 /* Slide Animations */
+/* Ghi đè keyframe cho Mobile (1 cột) */
 @keyframes slideLeft {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-33.33%);
+        transform: translateX(-100%); /* Trượt 100% khi chỉ có 1 cột */
     }
 }
 
@@ -265,7 +329,7 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(33.33%);
+        transform: translateX(100%); /* Trượt 100% khi chỉ có 1 cột */
     }
 }
 
@@ -321,6 +385,16 @@ body {
     height: 24px;
 }
 
+/* Hover Effect on Container */
+#projects-carousel-container:hover .carousel-btn {
+    opacity: 1;
+}
+
+.carousel-btn {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .carousel-btn-prev {
@@ -332,32 +406,173 @@ body {
     }
 }
 
+/* === KHỐI MEDIA QUERY MOBILE ĐÃ CHỈNH SỬA === */
 @media (max-width: 768px) {
+    /* === CẢI THIỆN ICON CỐ ĐỊNH (FIXED) === */
+    .fixed.right-4.top-1/2 {
+        right: 16px;           /* Giữ right-4 */
+        top: auto;             /* Xóa top-1/2 */
+        bottom: 20px;          /* Đẩy xuống dưới (bottom-5) */
+        transform: translateY(0); /* Xóa -translate-y-1/2 */
+        gap: 0.75rem;          /* Giảm khoảng cách gap-3 */
+    }
+
+    /* === CẢI THIỆN CAROUSEL DỰ ÁN === */
     .carousel-btn {
         width: 40px;
         height: 40px;
     }
     
     .carousel-btn-prev {
-        left: -45px;
+        left: 0px; /* Đưa nút vào gần mép hơn */
     }
     
     .carousel-btn-next {
-        right: -45px;
+        right: 0px; /* Đưa nút vào gần mép hơn */
     }
     
     .carousel-btn svg {
         width: 20px;
         height: 20px;
     }
-}
 
-/* Hover Effect on Container */
-#projects-carousel-container:hover .carousel-btn {
-    opacity: 1;
-}
+    .projects-grid {
+        grid-template-columns: 1fr; /* CHUYỂN VỀ 1 CỘT */
+        gap: 1.5rem; 
+    }
+    
+    #projects-carousel-container {
+        padding: 0 10px; /* Giảm padding ngang để card rộng hơn */
+    }
+    
+    /* Tăng kích thước phông chữ trong card dự án cho mobile */
+    .project-card .text-xl.font-bold {
+        font-size: 1.5rem; /* Tăng tiêu đề dự án */
+    }
+    .project-card .text-base {
+        font-size: 1rem; /* Tăng mô tả */
+    }
 
-.carousel-btn {
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+    /* === CẢI THIỆN BỐ CỤC KHU VỰC "GIẢI PHÁP PHẦN MỀM" (#software-products) === */
+    
+    /* 1. Giảm chiều cao tổng thể và kích thước chữ tiêu đề */
+    #software-products .min-h-\[700px\] {
+        /* GIẢM MẠNH CHIỀU CAO TỐI THIỂU CHO GỌN NHẤT */
+        min-height: 370px !important; 
+    }
+    
+    /* Thu nhỏ tiêu đề chính (H2) */
+    #software-products h2.text-4xl,
+    #software-products h2.text-5xl,
+    #software-products h2.text-6xl {
+        font-size: 2rem !important; /* Giảm xuống 2rem */
+        line-height: 1.15 !important; /* Giảm line-height */
+        margin-bottom: 0.5rem !important; /* Giảm khoảng cách dưới tiêu đề */
+    }
+    
+    /* Thu nhỏ tiêu đề phụ (P) */
+    #software-products p.text-xl,
+    #software-products p.text-2xl {
+        font-size: 1rem !important; /* Giảm xuống 1rem */
+        padding-top: 0.5rem !important; /* Giảm khoảng cách trên mô tả */
+        margin-top: 0 !important;
+    }
+
+    /* 2. Điều chỉnh vị trí hình ảnh trung tâm (fi.png) */
+    .absolute.bottom-0.inset-x-0.z-10 img {
+        max-width: 90%; /* Thu nhỏ ảnh nhân vật chính */
+    }
+    
+    /* 3. Điều chỉnh các Product Card (các hộp sản phẩm) */
+    .product-card {
+        width: 100px !important; /* Đặt kích thước cố định nhỏ hơn cho các sản phẩm lớn */
+    }
+    .product-card img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* ĐIỀU CHỈNH VỊ TRÍ CỦA CÁC SẢN PHẨM LỚN */
+    /* 1. Fi.tallest HOUSE (Top Left) */
+    .product-card.absolute.top-\[8\%\]:nth-child(1) { /* Top Left - FB */
+        top: 15% !important;
+        left: 5% !important;
+        width: 120px !important; 
+        transform: rotate(-10deg);
+    }
+    /* 2. Fi.tallest EDUTECH (Mid Left) */
+    .product-card.absolute.top-\[38\%\]:nth-child(2) { /* Mid Left - EDU */
+        top: 40% !important;
+        left: 5% !important;
+        width: 130px !important;
+        transform: rotate(10deg);
+    }
+    /* 3. Fi.tallest JEWELRY (Top Right) */
+    .product-card.absolute.top-\[18\%\]:nth-child(3) { /* Top Right - KC */
+        top: 10% !important;
+        right: 0% !important;
+        width: 80px !important;
+        transform: rotate(15deg);
+    }
+    /* 4. QUẢN LÝ TOÀN HỒ SƠ (Mid Right) */
+    .product-card.absolute.top-\[32\%\]:nth-child(4) { /* Mid Right - QL */
+        top: 35% !important;
+        right: 0% !important;
+        width: 90px !important;
+        transform: rotate(-15deg);
+    }
+    /* 5. Fi.tallest'S ECOMMERCE (Bottom Center) - Vẫn để ở giữa dưới */
+    .product-card.absolute.bottom-\[10\%\] { /* Bottom Center - ECOM */
+        bottom: 5% !important;
+        width: 150px !important; 
+    }
+
+    /* ĐIỀU CHỈNH VỊ TRÍ CỦA CÁC ICON NHỎ (5 icon) */
+    /* Icon 1: Clock */
+    .absolute.top-\[20\%\]:nth-child(6) {
+        top: 25% !important;
+        left: 15% !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+    /* Icon 2: Cart */
+    .absolute.top-\[45\%\]:nth-child(7) {
+        top: 50% !important;
+        left: 10% !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+    /* Icon 3: Chart */
+    .absolute.top-\[25\%\]:nth-child(8) {
+        top: 20% !important;
+        right: 15% !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+    /* Icon 4: Price Tag */
+    .absolute.top-\[32\%\]:nth-child(9) {
+        top: 45% !important;
+        right: 10% !important;
+        width: 35px !important;
+        height: 35px !important;
+    }
+    /* Icon 5: Globe */
+    .absolute.top-\[55\%\]:nth-child(10) {
+        top: 55% !important;
+        right: 5% !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    /* ẨN 4 THẺ SVG CŨ THÊM LẠI nếu chúng không còn phù hợp */
+    /* Nút mũi tên dưới cùng (thẻ SVG vàng) */
+    .absolute.-bottom-8 {
+        display: none !important;
+    }
+    /* 3 thẻ vuông: Settings, Terminal, Heart */
+    .product-card.absolute.top-\[85\%\]:nth-child(12),
+    .product-card.absolute.top-\[8\%\]:nth-child(13),
+    .product-card.absolute.top-\[40\%\]:nth-child(14) {
+        display: none !important;
+    }
 }
